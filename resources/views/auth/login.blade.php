@@ -1,8 +1,9 @@
 @extends('layouts.auth')
 
 @section('content')
-    <span class="logo-box">
-        <img src="{{ $frontThemeSettings->logo_url }}" alt="logo">
+    <span class="logo-box text-white h3">
+        {{-- <img src="{{ $frontThemeSettings->logo_url }}" alt="logo"> --}}
+        Stanjo Karen Suites
     </span>
     <h4 class="mb-30">@lang('app.signInToAccount')</h4>
     <form action="{{ route('login') }}" method="post">

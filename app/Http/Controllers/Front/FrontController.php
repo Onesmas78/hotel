@@ -364,9 +364,9 @@ class FrontController extends Controller
         $booking->save();
 
         $admins = User::allAdministrators()->get();
-        Notification::send($admins, new NewBooking($booking));
+        // Notification::send($admins, new NewBooking($booking));
         $user = User::findOrFail($booking->user_id);
-        $user->notify(new BookingConfirmation($booking));
+        // $user->notify(new BookingConfirmation($booking));
 
         return view('front.booking_success');
     }

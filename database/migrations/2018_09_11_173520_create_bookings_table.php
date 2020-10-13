@@ -18,7 +18,7 @@ class CreateBookingsTable extends Migration
             $table->unsignedInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->dateTime('date_time');
-            $table->enum('status', ['pending', 'in progress', 'completed', 'canceled'])->default('pending');
+            $table->enum('status', ['pending', 'in progress', 'completed', 'cancelled'])->default('pending');
             $table->string('payment_gateway');
             $table->float('original_amount');
             $table->float('discount');

@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-lg-8 col-12 my-lg-0 my-2">
                     <ul class="head-contact-right">
-                        <li class="location-search mb-3">
+                        {{-- <li class="location-search mb-3">
                             <span class="mr-2"> @lang('front.location')</span>
                             <div class="location-dropdown">
                                 <div id="scrollable-dropdown-menu" class="input-wrap">
@@ -39,7 +39,7 @@
                                     @endforelse
                                 </div>
                             </div>
-                        </li>
+                        </li> --}}
                         <li class="mb-3">
                             @if($user)
                                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
@@ -72,8 +72,9 @@
             <div class="row h-center">
                 <div class="col-lg-5 col-md-3 col-12">
                     <div class="logo">
-                        <a href="{{ route('front.index') }}">
-                            <img src="{{ $frontThemeSettings->logo_url }}" alt="logo">
+                        <a href="{{ route('front.index') }}" class="text-white">
+                            {{-- <img src="{{ $frontThemeSettings->logo_url }}" alt="logo"> --}}
+                            Stanjo Karen Suites
                         </a>
                     </div>
                 </div>
