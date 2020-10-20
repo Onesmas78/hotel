@@ -654,29 +654,6 @@ input:focus {
     width: 150px;
 }
 
-.topbar .logo::after {
-    content: "";
-    height: 100%;
-    left: -1000px;
-    right: 0;
-    position: absolute;
-    top: 0;
-    background: var(--primary-color);
-    z-index: -1;
-}
-
-.topbar .logo::before {
-    content: "";
-    height: 100%;
-    width: 100px;
-    right: -50px;
-    transform: skewX(30deg);
-    position: absolute;
-    top: 0;
-    background: var(--primary-color);
-    z-index: -1;
-}
-
 .logo a {
     color: #222;
     font-size: 30px;
@@ -689,9 +666,9 @@ input:focus {
 /* banner area */
 .carousel-inner img {
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 
 .banner-controls a {

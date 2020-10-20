@@ -14,10 +14,10 @@ class DefaultAdminSeeder extends Seeder
     public function run()
     {
         $user = new User();
-        $user->name = 'M.S.Dhoni';
-        $user->email = 'admin@example.com';
-        $user->mobile = '1919191919';
-        $user->password = '123456';
+        $user->name = 'Onesmas';
+        $user->email = 'onesmas@nisccloud.com';
+        $user->mobile = '0717601482';
+        $user->password = 'Onesmas@100';
 
         $user->save();
 

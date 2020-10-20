@@ -1,45 +1,25 @@
 <header class="header">
+   <!-- ========== TOP MENU ========== -->
     <div class="head-top">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 col-12 my-lg-0 my-2">
+                <div class="col-lg-6 col-12 my-lg-0 my-2 col-md-6">
                     <ul class="head-contact-left">
-                        <li>
-                            <i class="fa fa-phone"></i>
-                            {{ $settings->company_phone }}
-                        </li>
-
+                      <li>
+                          Welcome to Stanjo Karen Suites
+                      </li>
+                      <li>
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:{{ $settings->company_phone }}"> {{ $settings->company_phone }} </a>
+                      </li>
+                      <li class="email hidden-xxs">
+                        <i class="fa fa-envelope-o "></i> 
+                        <a href="mailto:{{ $settings->company_email }}">{{ $settings->company_email }}</a>
+                      </li>
                     </ul>
                 </div>
-                <div class="col-lg-8 col-12 my-lg-0 my-2">
-                    <ul class="head-contact-right">
-                        {{-- <li class="location-search mb-3">
-                            <span class="mr-2"> @lang('front.location')</span>
-                            <div class="location-dropdown">
-                                <div id="scrollable-dropdown-menu" class="input-wrap">
-                                    <i class="fa fa-map-marker"></i>
-                                    <select id="location" class="select2" name="location">
-                                        @foreach ($locations as $location)
-                                            <option value="{{ $location->id }}">{{ $location->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="language-drop mb-3">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle text-capitalize" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i> @lang('front.language')
-                                </a>
-                                <div class="dropdown-menu">
-                                    @forelse ($languages as $language)
-                                        <a class="dropdown-item" data-lang-code="{{ $language->language_code }}" href="javascript:;">{{ $language->language_name }}</a>
-                                    @empty
-                                        <a class="dropdown-item active" href="javascript:;" data-lang-code="en">English</a>
-                                    @endforelse
-                                </div>
-                            </div>
-                        </li> --}}
+                <div class="col-lg-6 col-12 my-lg-0 my-2 col-md-6">
+                    <ul class="head-contact-right">                        
                         <li class="mb-3">
                             @if($user)
                                 <form id="logoutForm" action="{{ route('logout') }}" method="POST">
@@ -67,31 +47,35 @@
             </div>
         </div>
     </div>
+     <!-- ========== TOP MENU ========== -->
     <nav class="topbar">
         <div class="container">
             <div class="row h-center">
-                <div class="col-lg-5 col-md-3 col-12">
+                <div class="col-md-3 col-sm-12">
                     <div class="logo">
                         <a href="{{ route('front.index') }}" class="text-white">
-                            {{-- <img src="{{ $frontThemeSettings->logo_url }}" alt="logo"> --}}
-                            Stanjo Karen Suites
+                            <img src="{{ $frontThemeSettings->logo_url }}" alt="logo">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-9 col-12">
-                    <ul class="d-flex h-center justify-content-md-end py-3 ml-md-5 ml-0">
-                        <li class="search-form">
-                            <form id="searchForm" action="{{ route('front.searchServices') }}" method="GET">
-                                <span class="input-wrap">
-                                    <i class="fa fa-search"></i>
-                                    <input type="text" class="form-control" name="search_term" id="search_term"
-                                        placeholder="@lang('front.searchHere')" autocomplete="none">
-                                </span>
-                                <button type="submit" class="submit btn btn-custom br-0 btn-dark w-100">
-                                    @lang('front.search')</button>
-                            </form>
-                        </li>
-                        <li title="@lang('front.cart')" class="top-cart">
+                    <ul class="d-flex h-center justify-content-between py-3 ml-md-5 ml-0">
+                      <li>
+                        
+                            @foreach ($pages as $page)
+                                @if ($page->id !== 2)
+                                    <li><a href="{{ route('front.page', $page->slug) }}">{{ $page->title }}</a></li>
+                                @else
+                                    @php
+                                        $contactPageSlug = $page->slug;
+                                        $contactPageTitle = $page->title;
+                                    @endphp
+                                @endif
+                            @endforeach
+                            <a href="{{ route('front.page', $contactPageSlug) }}">{{ $contactPageTitle }}</a>
+                        
+                      </li>
+                        <li title="@lang('front.cart')" class="top-cart justify-content-end">
                             <a href="{{ route('front.cartPage') }}">
                                 <i class="fa fa-shopping-bag"></i>
                                 <span class="cart-badge">{{ $productsCount }}</span>

@@ -21,7 +21,7 @@
 @endpush
 
 @section('content')
-    <section class="section">
+    <section class="section" style="padding-top:0px !important;">
         <div class="banner-area">
             <div id="banner-slider" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
@@ -80,8 +80,107 @@
                 </div>
             </div>
         </div>
+        <section id="about_rooms">
+          <div class="container">
+            <div class="row">
+                
+              <div class="col-md-4">
+                <div id="about">
+                    <div class="main_title mt_wave a_left">
+                        <h2>ABOUT US</h2>
+                    </div>
+                    <p class="main_description a_left">Stanjo Karen Suites is a family-owned hotel facility located along Langata road,opposite Tangaza University.Over looking Ngong Hills and
+                      the leafy suburbs of Karen,the hotel is situated ina serene environment
+                      ideal for a holiday vacation,a weekend gateway,or a business.</p>
+                </div>
+              </div>
 
-        <section class="sp-80 bg-w"  id="deals_section">
+              <div class="col-md-8">
+                <div id="rooms">
+                    <div class="main_title mt_wave a_left">
+                        <h2>OUR FAVORITE ROOMS</h2>
+                    </div> 
+                        <p class="main_description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p> 
+                    <div class="row">
+                        <div class="col-md-4">
+                            <article class="room">
+                                <figure>
+                                    <div class="price">€89 <span>/ night</span></div>
+                                    <a class="hover_effect h_blue h_link" href="room.html">
+                                        <img src="images/rooms/single-room.jpg" class="img-responsive" alt="Image">
+                                    </a>
+                                    <figcaption>
+                                        <h5><a href="room.html">Single Room</a></h5>
+                                        <span class="f_right"><a href="rooms-list.html" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="room">
+                                <figure>
+                                    <div class="price">€129 <span>/ night</span></div>
+                                    <a class="hover_effect h_blue h_link" href="room.html">
+                                        <img src="images/rooms/double-room.jpg" class="img-responsive" alt="Image">
+                                    </a>
+                                    <figcaption>
+                                        <h5><a href="room.html">Double Room</a></h5>
+                                        <span class="f_right"><a href="room.html" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                        <div class="col-md-4">
+                            <article class="room">
+                                <figure>
+                                    <div class="price"> € 189 <span>/ night</span></div>
+                                    <a class="hover_effect h_blue h_link" href="room.html">
+                                        <img src="images/rooms/deluxe-room.jpg" class="img-responsive" alt="Image">
+                                    </a>
+                                    <figcaption>
+                                        <h5><a href="room.html">Delux Room</a></h5>
+                                        <span class="f_right"><a href="room.html" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> 
+        <section class="section">
+          <div class="container" id="rooms_grid">
+              <div class="row" id="services">
+                @foreach ($services as $service)
+                  <!-- ITEM -->
+                  <div class="col-lg-3 col-md-4 col-sm-6 service-category-{{ $service->category_id }}">
+                      <div class="room_grid_item">
+                        <figure>
+                            <a href="{{ $service->service_detail_url }}" class="hover_effect h_link h_blue"><img src="{{ $service->service_image_url }}" class="img-responsive" alt="Image"></a>
+                        </figure>
+                        <div class="room_info">
+                            <h3><a href="{{ $service->service_detail_url }}">{{ ucwords($service->name) }}}</a></h3>
+                            <span>{{ $settings->currency->currency_symbol }} {{ $service->discounted_price }}</span>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+                            <div class="room_services">
+                              <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i> 
+                              <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Zante Restaurant"></i> 
+                            </div>
+                            <a href="#" class="button  btn_blue btn_full upper mt20 add-to-cart" data-service-price="{{ $service->discounted_price }}"
+                            data-service-id="{{ $service->id }}"
+                            data-service-name="{{ ucwords($service->name) }}"
+                            aria-expanded="false">Book Now</a>
+                        </div>
+                      </div>
+                  </div>  
+                  @endforeach             
+              </div>
+          </div>
+        </section>
+
+        {{-- <section class="sp-80 bg-w"  id="deals_section">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -256,7 +355,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
     </section>
 
 @endsection
@@ -446,63 +545,28 @@
                         if (response.services.length > 0) {
                             response.services.forEach(service => {
                                 services += `
-                                    <div class="col-lg-3 col-md-6 col-12 mb-30 services-list service-category-${service.category_id}">
-                                        <div class="listing-item">
-                                            <div class="img-holder" style="background-image: url('${ service.service_image_url }')">
-                                                <div class="category-name">
-                                                    <i class="flaticon-fork mr-1"></i>${service.category.name}
-                                                </div>
-                                                <div class="time-remaining">
-                                                    <i class="fa fa-clock-o mr-2"></i>
-                                                    <span>${service.time} ${makeSingular(service.time, service.time_type)}</span>
-                                                </div>
-                                            </div>
-                                            <div class="list-content">
-                                                <h5 class="mb-2">
-                                                    <a href="${service.service_detail_url}">${service.name}</a>
-                                                </h5>
-
-                                                <ul class="ctg-info centering h-center v-center">
-                                                    <li class="mt-1">
-                                                        <div class="service-price">
-                                                            <span class="unit">{{ $settings->currency->currency_symbol }}</span>${service.discounted_price}
-                                                        </div>
-                                                    </li>
-                                                    <li class="mt-1">
-                                                        <div class="dropdown add-items">
-                                                            <a href="javascript:;" class="btn-custom btn-blue dropdown-toggle add-to-cart"
-                                                        data-service-price="${service.discounted_price}"
-                                                        data-service-id="${service.id}"
-                                                        data-service-name="${service.name}"
-                                                        aria-expanded="false">
-                                                                @lang('app.add')
-                                                                <span class="fa fa-plus"></span>
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>`
-                            });
-
-                        services += `
-                            <div class="col-12 text-right">
-                                <a href="javascript:;" onclick="goToPage('GET', '{{ route('front.bookingPage') }}')" class="btn btn-custom">
-                                    @lang('front.selectBookingTime')
-                                    <i class="fa fa-angle-right ml-1"></i>
-                                </a>
-                            </div>`;
-                        }
-                        else {
-                            services += `
-                            <div class="col-12 text-center mb-5">
-                                <h3 class="no-services">
-                                    <i class="fa fa-exclamation-triangle"></i> @lang('front.noSearchRecordFound')
-                                </h3>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 service-category-${service.category_id}">
+                      <div class="room_grid_item">
+                        <figure>
+                            <a href="${service.service_detail_url}" class="hover_effect h_link h_blue"><img src="${ service.service_image_url }" class="img-responsive" alt="Image"></a>
+                        </figure>
+                        <div class="room_info">
+                            <h3><a href="${service.service_detail_url}">${service.name}</a></h3>
+                            <span>{{ $settings->currency->currency_symbol }} ${service.discounted_price}</span>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
+                            <div class="room_services">
+                              <i class="fa fa-coffee" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Breakfast Included" data-original-title="Breakfast"></i> 
+                              <i class="fa fa-cutlery" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Restaurant" data-original-title="Zante Restaurant"></i> 
                             </div>
-                            `
-                        }
+                            <a href="javascript:;" class="button  btn_blue btn_full upper mt20 add-to-cart" data-service-price="${service.discounted_price}"
+                            data-service-id="${service.id}"
+                            data-service-name="${service.name}"
+                            aria-expanded="false">Book Now</a>
+                        </div>
+                      </div>
+                  </div>`
+                            });
+                          }
 
                         $('#services').html(services);
 
@@ -526,6 +590,7 @@
                 data: data,
                 success: function (response) {
                     $('.cart-badge').text(response.productsCount);
+                    window.location.href = '{{ route('front.cartPage') }}'
                 }
             })
         });

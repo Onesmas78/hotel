@@ -65,12 +65,6 @@
                    data-toggle="tab">@lang('app.paymentCredential') @lang('menu.settings')</a>
                 <a class="nav-link" href="#sms-settings"
                    data-toggle="tab">@lang('app.smsCredentials') @lang('menu.settings')</a>
-                <a class="nav-link" href="#update" data-toggle="tab">
-                    @lang('menu.updateApp')
-                    @if($newUpdate == 1)
-                        <span class="badge badge-success">{{ $lastVersion }}</span>
-                    @endif
-                </a>
             </div>
         </div>
         <div class="col-12 col-md-10">
@@ -1105,17 +1099,6 @@
                                     </form>
                                 </div>
                                 <!-- /.tab-pane -->
-
-                                <div class="tab-pane" id="update">
-                                    <h4>@lang('menu.updateApp')</h4>
-                                    @include('vendor.froiden-envato.update.update_blade')
-
-
-                                    <hr>
-                                @include('vendor.froiden-envato.update.changelog')
-                                <!--/row-->
-                                </div>
-                                <!-- /.tab-pane -->
                             </div>
                         </div>
                     </div>
@@ -1689,6 +1672,5 @@
 
 
     </script>
-    @include('vendor.froiden-envato.update.update_script')
 
 @endpush
