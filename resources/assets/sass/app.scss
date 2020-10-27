@@ -7,11 +7,10 @@
 // Bootstrap
 // ---------------------------------------------------
 
-// $fa-font-path:        "../fonts/vendor/font-awesome" !default;
+$fa-font-path:        "../fonts/vendor/font-awesome" !default;
 $ti-font-path:        "../fonts/vendor/themify-icons-sass/themify-icons" !default;
 
 @import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "bootstrap-variables";
 @import "../../../node_modules/summernote/dist/summernote-bs4.css";
 @import "../../../node_modules/font-awesome/scss/font-awesome";
