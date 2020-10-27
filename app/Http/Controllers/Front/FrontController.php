@@ -116,7 +116,7 @@ class FrontController extends Controller
 
         $images = Media::select('id', 'file_name')->latest()->get();
 
-        return view('front.index', compact('categories', 'services', 'images', 'deals'));
+        return view('front.stanjo', compact('categories', 'services', 'images', 'deals'));
     }
 
     public function addOrUpdateProduct(Request $request)

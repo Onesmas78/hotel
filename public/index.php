@@ -1,47 +1,47 @@
 <?php
 
-if(!file_exists('../.env')){
-    $GLOBALS["error_type"] = "env-missing";
-    include('error_install.php');
-    exit(1);
-}
+// if(!file_exists('../.env')){
+//     $GLOBALS["error_type"] = "env-missing";
+//     include('error_install.php');
+//     exit(1);
+// }
 
-if (version_compare(PHP_VERSION, '7.2.5') < 0){
-    $GLOBALS["error_type"] = "php-version";
-    include('error_install.php');
-    exit(1);
-}
+// if (version_compare(PHP_VERSION, '7.2.5') < 0){
+//     $GLOBALS["error_type"] = "php-version";
+//     include('error_install.php');
+//     exit(1);
+// }
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
  */
-changeEnvironmentVariable();
+// changeEnvironmentVariable();
 
-function changeEnvironmentVariable()
-{
+// function changeEnvironmentVariable()
+// {
 
-    $path = '../.env';
-    if (file_exists($path)) {
-        //Try to read the current content of .env
-        $current = file_get_contents($path);
+//     $path = '../.env';
+//     if (file_exists($path)) {
+//         //Try to read the current content of .env
+//         $current = file_get_contents($path);
 
-        //Store the key
-        $original = [];
-        if (preg_match('/^DB_PASSWORD=(.+)$/m', $current, $original)) {
-            //Write the original key to console
-            //Overwrite with new key
+//         //Store the key
+//         $original = [];
+//         if (preg_match('/^DB_PASSWORD=(.+)$/m', $current, $original)) {
+//             //Write the original key to console
+//             //Overwrite with new key
 
-            $current = preg_replace('/^DB_PASSWORD=.+$/m', 'DB_PASSWORD="' . $original[1] . '"', $current);
+//             $current = preg_replace('/^DB_PASSWORD=.+$/m', 'DB_PASSWORD="' . $original[1] . '"', $current);
 
-            // Check if sting has double quote or not
-            if (strpos($original[1], '"') === false) {
-                file_put_contents($path, $current);
-            }
-        }
-    }
-}
+//             // Check if sting has double quote or not
+//             if (strpos($original[1], '"') === false) {
+//                 file_put_contents($path, $current);
+//             }
+//         }
+//     }
+// }
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader

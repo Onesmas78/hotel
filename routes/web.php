@@ -13,7 +13,6 @@
 
 Auth::routes();
 
-
 // Admin routes
 Route::group(['middleware' => 'auth'], function () {
 

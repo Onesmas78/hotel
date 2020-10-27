@@ -80,6 +80,7 @@
                 </div>
             </div>
         </div>
+        
         <section id="about_rooms">
           <div class="container">
             <div class="row">
@@ -150,6 +151,7 @@
             </div>
           </div>
         </section> 
+        
         <section class="section">
           <div class="container" id="rooms_grid">
               <div class="row" id="services">
@@ -356,6 +358,7 @@
                 </div>
             </div>
         </section> --}}
+        
     </section>
 
 @endsection
