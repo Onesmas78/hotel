@@ -20,7 +20,6 @@
     "vue": "^2.5.7"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
     "bootstrap-colorpicker": "^3.0.3",
     "bootstrap-timepicker": "^0.5.2",
     "chart.js": "^2.7.3",

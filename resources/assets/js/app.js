@@ -32,7 +32,6 @@ require('datatables.net-select-bs4');
 // styling only packages for bs4
 require('datatables.net-keytable');
 require('datatables.net-rowgroup');
-require('@fortawesome/fontawesome-free');
 require('eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min')
 require('dropify/src/js/dropify');
 require('sweetalert/dist/sweetalert.min');
