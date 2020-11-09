@@ -528,19 +528,10 @@
             <section id="about_rooms">
                 <div class="container">
                     <div class="row">
-                        
-                        <div class="col-md-4">
-                            <div id="about">
-                                <div class="main_title mt_wave a_left">
-                                    <h2>ABOUT HOTEL ZANTE</h2>
-                                </div>
-                                <p class="main_description a_left">Stanjo Karen Suites is a family-owned hotel facility located along Langata road,opposite Tangaza University.Over looking Ngong Hills and the leafy suburbs of Karen,the hotel is situated ina serene environment ideal for a holiday vacation,a weekend gateway,or a business.</p>
-                            </div>
-                        </div>
 
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div id="rooms">
-                                <div class="main_title mt_wave a_left">
+                                <div class="main_title mt_wave a_center">
                                     <h2>OUR FAVORITE ROOMS</h2>
                                 </div> 
                                     <p class="main_description">The establishment now boasts a total of 56 ensuite rooms, which are tastefully done to meet and exceed customer needs. There are different types of rooms to match the your needs</p> 
@@ -554,7 +545,7 @@
                                                 </a>
                                                 <figcaption>
                                                     <h5><a href="room.html">Single Room</a></h5>
-                                                    <span class="f_right"><a href="rooms-list.html" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
                                                 </figcaption>
                                             </figure>
                                         </article>
@@ -568,7 +559,7 @@
                                                 </a>
                                                 <figcaption>
                                                     <h5><a href="room.html">Double Room</a></h5>
-                                                    <span class="f_right"><a href="room.html" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
                                                 </figcaption>
                                             </figure>
                                         </article>
@@ -582,7 +573,7 @@
                                                 </a>
                                                 <figcaption>
                                                     <h5><a href="room.html">Twin Room</a></h5>
-                                                    <span class="f_right"><a href="room.html" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
                                                 </figcaption>
                                             </figure>
                                         </article>
@@ -615,28 +606,28 @@
                         <div class="col-md-5">
                             <div class="owl-thumbs" data-slider-id="features">
                                 <div class="owl-thumb-item">
-                                    <span class="media-left"><i class="fas fa-shuttle-van"></i></span>
+                                    <span class="media-left"><i class="fa fa-tree"></i></span>
                                     <div class="media-body">
                                         <h5>Safaris</h5>
                                         <p>After choosing to stay at Stanjo for holiday, you wouldn’t want to stay in your hotel room throughout</p>
                                     </div>
                                 </div>
                                 <div class="owl-thumb-item">
-                                    <span class="media-left"><i class="fas fa-hotel"></i></span>
+                                    <span class="media-left"><i class="fa fa-cutlery"></i></span>
                                     <div class="media-body">
                                         <h5>Restaurant</h5>
                                         <p>Our restaurant is the place you will find a broad variety of fresh, tasty, and nutritious foods.</p>
                                     </div>
                                 </div>
                                 <div class="owl-thumb-item">
-                                    <span class="media-left"><i class="fas fa-dumbbell"></i></span>
+                                    <span class="media-left"><i class="fa fa-bicycle"></i></span>
                                     <div class="media-body">
                                         <h5>Gym &amp; SPA</h5>
                                         <p>The Nairobi gyms can be costly, which is why we have a fitness centre right at the heart of Stanjo Karen Suites to help you save more.</p>
                                     </div>
                                 </div>
                                 <div class="owl-thumb-item">
-                                    <span class="media-left"><i class="fas fa-plane-arrival"></i></span>
+                                    <span class="media-left"><i class="fa fa-plane"></i></span>
                                     <div class="media-body">
                                         <h5>Airport Transfer</h5>
                                         <p>Often, we have international guests checking in at Stanjo. We always want to give them a warm welcome right from the airport, thanks to our airport transfer services</p>
@@ -740,7 +731,7 @@
                     <!-- END ITEM -->
                 </div>
 
-                 <div class="container">
+                <div class="container">
                     <div class="mt40 a_center">
                         <a class="button btn_sm btn_dark upper" href="gallery.html">View Full Gallery</a>
                     </div>

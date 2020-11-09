@@ -23,9 +23,9 @@ class CreateCurrenciesTable extends Migration
         });
 
         Currency::create([
-            'currency_name' => 'US Dollars',
-            'currency_symbol' => '$',
-            'currency_code' => 'USD'
+            'currency_name' => 'Kenyan Shilling',
+            'currency_symbol' => 'Ksh',
+            'currency_code' => 'KES'
         ]);
     }
 

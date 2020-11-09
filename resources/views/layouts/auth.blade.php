@@ -9,7 +9,7 @@
         <title>{{ $pageTitle . ' | ' . $settings->company_name }}</title>
 
         <link rel="icon" href="{{ asset('favicon/favicon.ico') }}" type="image/x-icon" />
-        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/bootstrap4.min.css') }}">
         {{--<link rel="stylesheet" href="{{ asset('assets/css/bootstrap-datepicker3.css') }}">--}}
         <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/style.css') }}">

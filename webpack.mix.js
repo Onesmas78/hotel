@@ -21,7 +21,8 @@ mix.js('resources/assets/js/app.js', 'public/js')
   .styles([
     'public/assets/css/bootstrap.min.css',
     'public/assets/css/font-awesome.min.css',
-    'public/assets/css/stanjo.css'
+    'public/assets/css/stanjo.css',
+    'node_modules/smartwizard/dist/css/smart_wizard_all.css'
   ], 'public/assets/css/front-styles.css')
   .sass('resources/assets/sass/app.scss', 'public/css')
   .options({ processCssUrls: false })

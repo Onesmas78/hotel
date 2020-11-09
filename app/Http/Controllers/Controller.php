@@ -63,8 +63,6 @@ class Controller extends BaseController
 
     public function __construct()
     {
-        $this->showInstall();
-        $this->checkMigrateStatus();
         $this->settings = CompanySetting::first();
         $this->smsSettings = SmsSetting::first();
 

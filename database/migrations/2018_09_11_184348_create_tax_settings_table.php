@@ -22,7 +22,7 @@ class CreateTaxSettingsTable extends Migration
             $table->timestamps();
         });
 
-        TaxSetting::create(['tax_name' => 'GST', 'percent' => 18]);
+        TaxSetting::create(['tax_name' => 'VAT', 'percent' => 16]);
 
     }
 

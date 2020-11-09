@@ -11,64 +11,78 @@
     <title>Stanjo Karen Suites</title>
 
     <link rel="icon" href="{{ asset('favicon/favicon.ico') }}" type="image/x-icon" />
-    
-    
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
     <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/revolution/css/layers.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/revolution/css/settings.css') }}"rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/revolution/css/navigation.css') }}"rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/revolution/css/settings.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/revolution/css/navigation.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/bootstrap-select.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/famfamfam-flags.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet" type="text/css">
-    
-    <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/stanjo.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/front-styles.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
-    
+
+
+    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/front-scripts.js') }}"></script> --}}
+
+    <style>
+        :root {
+            --primary-color: {{ $frontThemeSettings->primary_color }};
+
+            --dark-primary-color: {{ $frontThemeSettings->primary_color }};
+        }
+
+            {!! $frontThemeSettings->custom_css !!}
+
+    </style>
+
 </head>
 
 
 <body>
-<!-- ========== PRELOADER ========== -->
- 
+    <!-- ========== PRELOADER ========== -->
 
-  <div class="wrapper">
 
-     <!-- ========== TOP MENU ========== -->
+    <div class="wrapper">
+
+        <!-- ========== TOP MENU ========== -->
         <div class="top_menu">
             <div class="container">
                 <div class="welcome_mssg hidden-xs">
                     Welcome to Stanjo Karen Suites
                 </div>
                 <ul class="top_menu_right">
-                    <li><i class="fa fa-phone"></i><a href="tel:{{ $settings->company_phone }}"> {{ $settings->company_phone }} </a></li>
-                    <li class="email hidden-xxs"><i class="fa fa-envelope-o "></i> <a href="mailto:{{ $settings->company_email }}">{{ $settings->company_email }}</a></li>
+                    <li><i class="fa fa-phone"></i><a href="tel:{{ $settings->company_phone }}">
+                            {{ $settings->company_phone }} </a></li>
+                    <li class="email hidden-xxs"><i class="fa fa-envelope-o "></i> <a
+                            href="mailto:{{ $settings->company_email }}">{{ $settings->company_email }}</a></li>
                     <li>
-                      @if($user)
-                                <form id="logoutForm" action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                    <div class="dropdown add-items">
-                                        <a href="javascript:;" class="dropdown-toggle"
-                                           data-toggle="dropdown" aria-expanded="false">{{ $user->name }}<span class="fa fa-caret-down"></span>
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
-                                                <i class="fa fa-user"></i> @lang('front.myAccount')</a>
-                                            <a class="dropdown-item" href="javascript:;" onclick="logoutUser(event)">
-                                                <i class="fa fa-sign-out mr-2"> </i>@lang('app.logout')</a>
-                                        </div>
-                                    </div>
-                                </form>
-                            @else
-                                <a href="{{ route('login') }}">
-                                    <i class="fa fa-user mr-2"> </i>@lang('app.signIn')
-                                </a>
-                            @endif
+                        @if ($user)
+                            <form id="logoutForm" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <div class="dropdown simple-menu">
+                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"
+                                        aria-expanded="false">{{ $user->name }}<span class="fa fa-caret-down"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"> <a href="{{ route('admin.dashboard') }}">
+                                                <i class="fa fa-user"></i> @lang('front.myAccount')</a></li>
+                                        <li class="dropdown-item"> <a href="javascript:;"
+                                                onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">
+                                                <i class="fa fa-sign-out mr-2"> </i>@lang('app.logout')</a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                        @else
+                            <a href="{{ route('login') }}">
+                                <i class="fa fa-user mr-2"> </i>@lang('app.signIn')
+                            </a>
+                        @endif
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -77,7 +91,8 @@
         <header class="fixed">
             <div class="container">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle mobile_menu_btn" data-toggle="collapse" data-target=".mobile_menu" aria-expanded="false">
+                    <button type="button" class="navbar-toggle mobile_menu_btn" data-toggle="collapse"
+                        data-target=".mobile_menu" aria-expanded="false">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -109,8 +124,9 @@
                                 <li><a href="room2.html">Room Details 2</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown mega_menu mega_menu_fullwidth"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">PAGES <b class="caret"></b></a>
-                            <ul class="dropdown-menu"> 
+                        <li class="dropdown mega_menu mega_menu_fullwidth"><a href="#" data-toggle="dropdown"
+                                class="dropdown-toggle" aria-expanded="true">PAGES <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
                                 <li>
                                     <div class="mega_menu_inner">
                                         <div class="row">
@@ -119,8 +135,10 @@
                                                 <li><a href="gallery.html">Gallery 4 Columns</a></li>
                                                 <li><a href="gallery-3columns.html">Gallery 3 Columns</a></li>
                                                 <li><a href="gallery-2columns.html">Gallery 2 Columns</a></li>
-                                                <li><a href="gallery-withoutdetails.html">Gallery Without Details</a></li>
-                                                <li><a href="gallery-withoutfilters.html">Gallery Without Filters</a></li>
+                                                <li><a href="gallery-withoutdetails.html">Gallery Without Details</a>
+                                                </li>
+                                                <li><a href="gallery-withoutfilters.html">Gallery Without Filters</a>
+                                                </li>
                                                 <li><a href="gallery-slider.html">Gallery Slider</a></li>
                                                 <li><a href="gallery2.html">Gallery Version 2</a></li>
                                             </ul>
@@ -142,10 +160,10 @@
                                                 <li><a href="place-details.html">Place Details</a></li>
                                                 <li><a href="events.html">Events</a></li>
                                                 <li><a href="event-details.html">Event Details</a></li>
-                                                <li><a href="spa.html">Our Spa</a></li> 
+                                                <li><a href="spa.html">Our Spa</a></li>
                                             </ul>
                                             <ul class="col-md-3">
-                                                <li class="list_title">MORE PAGES</li> 
+                                                <li class="list_title">MORE PAGES</li>
                                                 <li><a href="loading.html">Loading Page </a></li>
                                                 <li><a href="loading2.html">Loading Page 2</a></li>
                                                 <li><a href="loading3.html">Loading Page 3</a></li>
@@ -159,7 +177,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown simple_menu"><a href="#" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="true">ELEMENTS <b class="caret"></b></a>
+                        <li class="dropdown simple_menu"><a href="#" data-toggle="dropdown" class="dropdown-toggle"
+                                aria-expanded="true">ELEMENTS <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="typography.html">Typography</a></li>
                                 <li><a href="buttons.html">Buttons</a></li>
@@ -167,26 +186,31 @@
                             </ul>
                         </li> --}}
                         <li><a href="#">CONTACT US</a></li>
-                        {{-- <li><a href="blog.html">BLOG</a></li> --}}
+                        {{-- <li><a href="blog.html">BLOG</a></li>
+                        --}}
                         <li class="menu_button">
-                            <a href="booking-form.html" class="button  btn_yellow"><i class="fa fa-calendar"></i>BOOK ONLINE</a>
+                            <a href="{{ route('front.rooms.index') }}" class="button  btn_yellow"><i
+                                    class="fa fa-calendar"></i>BOOK ONLINE</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-    @yield('content')
+        @yield('content')
 
-    <!-- ========== FOOTER ========== -->
+        <!-- ========== FOOTER ========== -->
+
         <footer class="dark">
             <div class="inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 col-sm-6 widget">
                             <div class="about">
-                                <a href="index.html"><img class="logo" src="{{ $frontThemeSettings->logo_url }}" height="80" alt="Logo"></a>
-                                <p>Over looking Ngong Hills and the leafy suburbs of Karen, Stanjo Karen Suites is a family-owned hotel facility situated in a serene environment.</p>
+                                <a href="index.html"><img class="logo" src="{{ $frontThemeSettings->logo_url }}"
+                                        height="80" alt="Logo"></a>
+                                <p>Over looking Ngong Hills and the leafy suburbs of Karen, Stanjo Karen Suites is a
+                                    family-owned hotel facility situated in a serene environment.</p>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">
@@ -213,10 +237,14 @@
                             <h5>Contact Us</h5>
                             <address>
                                 <ul class="address_details">
-                                    <li><i class="glyphicon glyphicon-map-marker"></i> {!! $settings->formatted_address !!}</li>
-                                    <li><i class="glyphicon glyphicon-phone-alt"></i> Phone: {{ $settings->company_phone }} </li>
-                                   
-                                    <li><i class="fa fa-envelope"></i> Email: <a href="mailto:{{ $settings->company_email }}">{{ $settings->company_email }}</a></li>
+                                    <li><i class="glyphicon glyphicon-map-marker"></i> {!! $settings->formatted_address
+                                        !!}</li>
+                                    <li><i class="glyphicon glyphicon-phone-alt"></i> Phone:
+                                        {{ $settings->company_phone }}
+                                    </li>
+                                    <li><i class="fa fa-envelope"></i> Email: <a
+                                            href="mailto:{{ $settings->company_email }}">{{ $settings->company_email }}</a>
+                                    </li>
                                 </ul>
                             </address>
                         </div>
@@ -228,35 +256,46 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="copyrights">
-                                  {{ \Carbon\Carbon::now()->year }} <a href="/">{{ ucfirst($settings->company_name)}}</a> All Rights Reserved.
+                                {{ \Carbon\Carbon::now()->year }} <a href="/">{{ ucfirst($settings->company_name) }}</a>
+                                All Rights Reserved.
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="social_media">
-                                <a class="facebook" data-original-title="Facebook" data-toggle="tooltip" href="#"><i class="fa fa-facebook"></i></a>
-                                <a class="twitter" data-original-title="Twitter" data-toggle="tooltip" href="#"><i class="fa fa-twitter"></i></a>
-                                <a class="googleplus" data-original-title="Google Plus" data-toggle="tooltip" href="#"><i class="fa fa-google-plus"></i></a>
-                                <a class="pinterest" data-original-title="Pinterest" data-toggle="tooltip" href="#"><i class="fa fa-pinterest"></i></a>
-                                <a class="linkedin" data-original-title="Linkedin" data-toggle="tooltip" href="#"><i class="fa fa-linkedin"></i></a>
-                                <a class="instagram" data-original-title="Instagram" data-toggle="tooltip" href="#"><i class="fa fa-instagram"></i></a>
+                                <a class="facebook" data-original-title="Facebook" data-toggle="tooltip" href="#"><i
+                                        class="fa fa-facebook"></i></a>
+                                <a class="twitter" data-original-title="Twitter" data-toggle="tooltip" href="#"><i
+                                        class="fa fa-twitter"></i></a>
+                                <a class="googleplus" data-original-title="Google Plus" data-toggle="tooltip"
+                                    href="#"><i class="fa fa-google-plus"></i></a>
+                                <a class="pinterest" data-original-title="Pinterest" data-toggle="tooltip" href="#"><i
+                                        class="fa fa-pinterest"></i></a>
+                                <a class="linkedin" data-original-title="Linkedin" data-toggle="tooltip" href="#"><i
+                                        class="fa fa-linkedin"></i></a>
+                                <a class="instagram" data-original-title="Instagram" data-toggle="tooltip" href="#"><i
+                                        class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-  </div>
+    </div>
 
-  <!-- ========== BACK TO TOP ========== -->
-  <div id="back_to_top">
-      <i class="fa fa-angle-up" aria-hidden="true"></i>
-  </div>
-  <!-- ========== NOTIFICATION ========== -->
-  <div id="notification"></div>
 
-  <!-- ========== JAVASCRIPT ========== -->
+
+    <!-- ========== BACK TO TOP ========== -->
+    <div id="back_to_top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
+    <!-- ========== NOTIFICATION ========== -->
+    <div id="notification"></div>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    @stack('footer-script')
     <script type="text/javascript" src="{{ asset('assets/stanjo/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWEnbyzmLtVvA5Yk5vyN4DXS24AYZJDRM"></script>
     <script type="text/javascript" src="{{ asset('assets/stanjo/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/stanjo/bootstrap-datepicker.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/stanjo/bootstrap-select.min.js') }}"></script>
@@ -277,16 +316,96 @@
 
     <!-- ========== REVOLUTION SLIDER ========== -->
     <script type="text/javascript" src="{{ asset('assets/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/jquery.themepunch.revolution.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('assets/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/revolution/js/jquery.themepunch.revolution.min.js') }}">
+    </script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.actions.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.migration.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+    <script type="text/javascript"
+        src="{{ asset('assets/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
+    @push('footer-script')
+        <script>
+            (function($) {
+                function logoutUser(e) {
+                    e.preventDefault();
+                    $('#logoutForm').submit();
+                }
+
+            })(jQuery);
+
+        </script>
+        <script>
+            $(function() {
+                toastr.options = {
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": true
+                };
+            });
+
+            function goToPage(method, pageUrl, data = null) {
+                var options = {
+                    url: pageUrl,
+                    type: method,
+                    // container: 'section.section'
+                    success: function(response) {
+                        if (response.status !== 'fail') {
+                            window.location.href = pageUrl
+                        }
+                    }
+                };
+
+                if (data) {
+                    options.data = data
+                }
+
+                $.easyAjax(options)
+            }
+
+            var LightenColor = function(color, percent) {
+                var num = parseInt(color.replace('#', ''), 16),
+                    amt = Math.round(2.55 * percent),
+                    R = (num >> 16) + amt,
+                    B = (num >> 8 & 0x00FF) + amt,
+                    G = (num & 0x0000FF) + amt;
+
+                return (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (B < 255 ? B < 1 ? 0 : B : 255) *
+                    0x100 + (G < 255 ? G < 1 ? 0 : G : 255)).toString(16).slice(1);
+            };
+
+            var DarkenColor = function(color, percent) {
+                var num = parseInt(color.replace('#', ''), 16),
+                    amt = Math.round(2.55 * percent),
+                    R = (num >> 16) - amt,
+                    B = (num >> 8 & 0x00FF) - amt,
+                    G = (num & 0x0000FF) - amt;
+
+                return (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 + (B < 255 ? B < 1 ? 0 : B : 255) *
+                    0x100 + (G < 255 ? G < 1 ? 0 : G : 255)).toString(16).slice(1);
+            };
+
+            var primaryColor = getComputedStyle(document.documentElement)
+                .getPropertyValue('--primary-color');
+
+            document.documentElement.style.setProperty('--dark-primary-color', '#' + DarkenColor(primaryColor, 15));
+
+        </script>
+    @endpush
+
+
 </body>
 
 </html>

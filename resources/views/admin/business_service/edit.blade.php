@@ -130,27 +130,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-
-                                <div class="form-group">
-                                    <label>@lang('modules.services.time')</label>
-                                    <div class="input-group">
-                                        <input type="number" step="0.01" min="0" class="form-control form-control-lg" name="time" value="{{ $businessService->time }}">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" id="time-type-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">@lang('app.'.$businessService->time_type)</button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item time_type" data-type="minutes" href="javascript:;">@lang('app.minutes')</a>
-                                                <a class="dropdown-item time_type" data-type="hours" href="javascript:;">@lang('app.hours')</a>
-                                                <a class="dropdown-item time_type" data-type="days" href="javascript:;">@lang('app.days')</a>
-                                            </div>
-                                        </div>
-
-                                        <input type="hidden" id="time-type" name="time_type" value="{{ $businessService->time_type }}">
-
-                                    </div>
-
-                                </div>
-                            </div>
+                            
 
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -231,7 +211,6 @@
             })
 
             $('#discount-type').val('{{ $businessService->discount_type }}');
-            $('#time-type').val('{{ $businessService->time_type }}');
         })
         var mockFile = {!! $images !!};
         var defaultImage = '';
@@ -342,12 +321,6 @@
             calculateDiscountedPrice();
         });
 
-        $('.time_type').click(function () {
-            var type = $(this).data('type');
-
-            $('#time-type-select').html(type);
-            $('#time-type').val(type);
-        });
 
         $('#save-form').click(function () {
 

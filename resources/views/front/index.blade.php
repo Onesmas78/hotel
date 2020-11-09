@@ -163,7 +163,7 @@
                             <a href="{{ $service->service_detail_url }}" class="hover_effect h_link h_blue"><img src="{{ $service->service_image_url }}" class="img-responsive" alt="Image"></a>
                         </figure>
                         <div class="room_info">
-                            <h3><a href="{{ $service->service_detail_url }}">{{ ucwords($service->name) }}}</a></h3>
+                            <h3><a href="{{ $service->service_detail_url }}">{{ ucwords($service->name) }}</a></h3>
                             <span>{{ $settings->currency->currency_symbol }} {{ $service->discounted_price }}</span>
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore...</p>
                             <div class="room_services">

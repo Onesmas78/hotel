@@ -9,8 +9,6 @@
         "barryvdh/laravel-dompdf": "^0.8.3",
         "barryvdh/laravel-translation-manager": "^0.5.2",
         "fideloper/proxy": "^4.0",
-        "froiden/envato": "^1.0",
-        "froiden/laravel-installer": "^1.6",
         "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "^2.3",
         "laravel/framework": "5.8.*",

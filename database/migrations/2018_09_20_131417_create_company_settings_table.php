@@ -32,15 +32,15 @@ class CreateCompanySettingsTable extends Migration
         });
 
         $data = [
-            'company_name' => 'Froiden Technologies Pvt Ltd',
-            'company_email' => 'company@example.com',
-            'company_phone' => '1234512345',
-            'address' => 'Jaipur, India',
-            'website' => 'http://www.xyz.com',
+            'company_name' => 'Stanjo Karen Suites',
+            'company_email' => 'info@stanjokarensuites.com',
+            'company_phone' => '0733960752',
+            'address' => 'Nairobi, Kenya',
+            'website' => 'http://stanjokarensuites.com',
             'locale' => 'en',
-            'timezone' => 'Asia/Kolkata',
-            'latitude' => '26.91243360',
-            'longitude' => '75.78727090',
+            'timezone' => 'Africa/Nairobi',
+            'latitude' => '-1.349251',
+            'longitude' => '36.747062',
             'currency_id' => '1'
         ];
 

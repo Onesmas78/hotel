@@ -137,44 +137,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
-
-                                <div class="form-group">
-                                    <label>@lang('modules.services.time')</label>
-                                    <div class="input-group">
-                                        <input onkeypress="return isNumberKey(event)" type="number" class="form-control form-control-lg" name="time" @if (!empty($service)) value="{{ $service->time }}" @endif>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-secondary dropdown-toggle" id="time-type-select" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                @if (!empty($service))
-                                                    @switch($service->time_type)
-                                                        @case('minutes')
-                                                            @lang('app.minutes')
-                                                            @break
-                                                        @case('hours')
-                                                            @lang('app.hours')
-                                                            @break
-                                                        @case('days')
-                                                            @lang('app.days')
-                                                            @break
-                                                        @default
-                                                    @endswitch
-                                                @else
-                                                    @lang('app.minutes')
-                                                @endif
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item time_type" data-type="minutes" href="javascript:;">@lang('app.minutes')</a>
-                                                <a class="dropdown-item time_type" data-type="hours" href="javascript:;">@lang('app.hours')</a>
-                                                <a class="dropdown-item time_type" data-type="days" href="javascript:;">@lang('app.days')</a>
-                                            </div>
-                                        </div>
-
-                                        <input type="hidden" id="time-type" name="time_type" value="minutes">
-
-                                    </div>
-
-                                </div>
-                            </div>
+                            
 
                             <div class="col-md-12">
                                 <div class="form-group">
@@ -246,7 +209,6 @@
 
             @if (!empty($service))
                 $('#discount-type').val('{{ $service->discount_type }}');
-                $('#time-type').val('{{ $service->time_type }}');
             @endif
 
             calculateDiscountedPrice();
@@ -296,13 +258,6 @@
 
         $('#slug').keyup(function(e) {
             createSlug($(this).val());
-        });
-
-        $('.time_type').click(function () {
-            var type = $(this).data('type');
-
-            $('#time-type-select').html(type);
-            $('#time-type').val(type);
         });
 
 
