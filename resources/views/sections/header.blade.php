@@ -56,7 +56,7 @@
                     <ul class="nav navbar-nav">
                         <li class="mobile_menu_title" style="display:none;">MENU</li>
                         <li class="dropdown simple_menu active">
-                            <a href="#" class="menu_button" data-toggle="dropdown">HOME</a>
+                            <a href="/" class="menu_button" data-toggle="dropdown">HOME</a>
                             {{-- <ul class="dropdown-menu">
                                 <li><a href="index.html">Home Version 1</a></li>
                                 <li><a href="index2.html">Home Version 2</a></li>
@@ -65,6 +65,8 @@
                                 <li><a href="boxed.html">Boxed Layout</a></li>
                             </ul> --}}
                         </li>
+                        <li class="dropdown simple_menu">
+                            <a href="{{ route('front.rooms.index') }}" class="" data-toggle="">ROOMS <b class="caret"></b></a></li>
                         {{-- <li class="dropdown simple_menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ROOMS <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -136,12 +138,16 @@
                                 <li><a href="icons.html">Icons</a></li>
                             </ul>
                         </li> --}}
-                        <li><a href="#">CONTACT US</a></li>
-                        {{-- <li><a href="blog.html">BLOG</a></li>
-                        --}}
+                        <li><a href="{{ route('front.ourservices') }}">OUR SERVICES</a></li>
+                        <li><a href="{{ route('front.aboutus') }}">ABOUT US</a></li>
+                        <li><a href="{{ route('front.contactus') }}">CONTACT US</a></li>
                         <li class="menu_button">
                             <a href="{{ route('front.rooms.index') }}" class="button  btn_yellow"><i
                                     class="fa fa-calendar"></i>BOOK ONLINE</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('front.cartPage') }}"><i
+                                    class="fa fa-cart"></i>CART</a>
                         </li>
                     </ul>
                 </nav>

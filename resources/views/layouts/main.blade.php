@@ -105,11 +105,11 @@
                     <ul class="nav navbar-nav">
                         <li class="mobile_menu_title" style="display:none;">MENU</li>
                         <li class="dropdown simple_menu active">
-                            <a href="#" class="menu_button" data-toggle="dropdown">HOME</a>
+                            <a href="/" class="menu_button" data-toggle="dropdown">HOME</a>
                              
                         </li>
                          <li class="dropdown simple_menu">
-                            <a href="" class="" data-toggle="">ROOMS <b class="caret"></b></a>
+                            <a href="{{ route('front.rooms.index') }}" class="" data-toggle="">ROOMS <b class="caret"></b></a></li>
                             <!--
                             <ul class="dropdown-menu">
                                 <li><a href="rooms-list.html">Rooms List View</a></li>
@@ -129,6 +129,11 @@
                         <li class="menu_button">
                             <a href="{{ route('front.rooms.index') }}" class="button  btn_yellow"><i
                                     class="fa fa-calendar"></i>BOOK ONLINE</a>
+                        </li>
+                        
+                        <li>
+                            <a href="{{ route('front.cartPage') }}"><i
+                                    class="fa fa-cart"></i>CART</a>
                         </li>
                     </ul>
                 </nav>
@@ -154,21 +159,19 @@
                         <div class="col-md-3 col-sm-6 widget">
                             <h5>Useful Links</h5>
                             <ul class="useful_links">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Location</a></li>
+                                <li><a href="{{ route('front.aboutus') }}">About us</a></li>
+                                <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
+                                <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
+                                <li><a href="{{ route('front.cart') }}">Cart</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">
                             <h5>Useful Links</h5>
                             <ul class="useful_links">
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Location</a></li>
+                                <li><a href="{{ route('front.aboutus') }}">About us</a></li>
+                                <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
+                                <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
+                                <li><a href="{{ route('front.cart') }}">Cart</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">
