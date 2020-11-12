@@ -1094,7 +1094,35 @@ class FrontController extends Controller
         return $users->first()->id;
 
     }
+    
+    public function aboutus(){
+        
+        return View('front.about');
+
+      
+    }
+
+    
 
 
+    public function gallery(){
+    
+        return View('front.gallery');
+ }
 
-} /* End of main class */
+
+ public function contactus(){
+    
+    return View('front.contactus');
+
+}
+
+
+ public function ourservices(){
+    
+    return View('front.ourservices');
+
+}
+}
+
+/* End of main class */

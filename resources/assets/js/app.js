@@ -2,8 +2,8 @@ import jQuery from 'jquery/src/jquery'
 window.$ = window.jQuery = jQuery;
 import 'bootstrap/dist/js/bootstrap.bundle.min'
 
-window._ = require( 'lodash' );
-window.$ = window.jQuery = require( 'jquery' );
+window._ = require('lodash');
+window.$ = window.jQuery = require('jquery');
 window.Popper = require('popper.js').default;
 import 'summernote/dist/summernote-bs4.min'
 
@@ -39,7 +39,6 @@ import toastr from 'toastr/build/toastr.min'
 window.toastr = toastr;
 require('./helper')
 require('select2')
-require('smartwizard');
 import Dropzone from 'dropzone'
 window.Dropzone = Dropzone
 

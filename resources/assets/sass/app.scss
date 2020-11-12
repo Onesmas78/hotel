@@ -7,8 +7,8 @@
 // Bootstrap
 // ---------------------------------------------------
 
-$fa-font-path: "../fonts/vendor/font-awesome" !default;
-$ti-font-path: "../fonts/vendor/themify-icons-sass/themify-icons" !default;
+$fa-font-path:        "../fonts/vendor/font-awesome" !default;
+$ti-font-path:        "../fonts/vendor/themify-icons-sass/themify-icons" !default;
 
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "bootstrap-variables";
@@ -25,7 +25,6 @@ $ti-font-path: "../fonts/vendor/themify-icons-sass/themify-icons" !default;
 @import "../../../node_modules/dropify/src/sass/dropify";
 @import "../../../node_modules/select2/src/scss/core";
 @import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
-@import "../../../node_modules/smartwizard/dist/css/smart_wizard_all.css";
 
 // VARIABLES AND MIXINS
 // ---------------------------------------------------

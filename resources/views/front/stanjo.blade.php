@@ -5,422 +5,107 @@
 @section('content')
 
 
-        <!-- ========== REVOLUTION SLIDER ========== -->
-            <div id="classic_slider" class="rev_slider" style="display:none">
-                <ul>
-                    <!-- SLIDE NR. 1 -->
-                    <li data-transition="crossfade">
-                        <!-- MAIN IMAGE -->
-                        <img src="{{ asset('user-uploads/carousel-images/'.$images[0]->file_name) }}" 
-                             alt="Image" 
-                             title="slider_bg2"
-                             data-bgposition="center center" 
-                             data-bgfit="cover" 
-                             data-bgrepeat="no-repeat" 
-                             data-bgparallax="10" 
-                             class="rev-slidebg" 
-                             data-no-retina="">
-                        <!-- LAYER NR. 1 -->
-                        <div class="tp-caption tp-resizeme"
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="320" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="['60','50','40','30']" 
-                             data-lineheight="['60','50','40','30']"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 5; color: #fff; font-weight: 900;">{{ strtoupper($settings->company_name)}} </div>
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="410" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="16" 
-                             data-lineheight="16"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 6; color: #fff;">Stay with Us</div>
-                        <!-- LAYER NR. 3 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
-                             data-x="center" 
-                             data-hoffset="-170" 
-                             data-y="414"
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-width="['100']" 
-                             data-height="['4']"
-                             data-transform_idle="o:1;"
-                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:500;" 
-                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2000"
-                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
-                        </div>
-                        <!-- LAYER NR. 4 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center"
-                             data-hoffset="-170" 
-                             data-y="418" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;"
-                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:500;"
-                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
-                             data-start="2100"
-                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>
-                        <!-- LAYER NR. 5 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
-                             data-x="center" 
-                             data-hoffset="170"
-                             data-y="414"
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:500;"
-                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2000" 
-                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
-                        </div>
-                        <!-- LAYER NR. 6 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"  
-                             data-x="center"
-                             data-hoffset="170" 
-                             data-y="418" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;"
-                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:500;" 
-                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2100"
-                             style="z-index: 7;background: url(images/icons/wave_white.svg);">
-                        </div>
-                       <!-- LAYER NR. 7 -->
-                       <a class="tp-caption button btn_blue" 
-                          href="booking-form.html"
-                          data-x="center"
-                          data-hoffset="-100"
-                          data-y="480" 
-                          data-voffset=""
-                          data-responsive_offset="on" 
-                          data-fontsize="14"
-                          data-whitespace="nowrap"
-                          data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                          style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM TODAY
-                        </a>
-                       <!-- LAYER NR. 8 -->
-                       <a class="tp-caption button btn_yellow " 
-                          href="contact.html"
-                          data-x="center" 
-                          data-hoffset="108"
-                          data-y="480" 
-                          data-voffset=""
-                          data-responsive_offset="on" 
-                          data-fontsize="14"
-                          data-whitespace="nowrap"
-                          data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                          style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US
-                        </a>
-                        <!-- LAYER NR. 9 -->
-                        {{-- <div class="tp-caption tp_m_title tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="200"
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="['18','18','16','16']"
-                             data-lineheight="['18','18','16','16']"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                            <i class="fa fa-star-o"></i>
-                        </div> --}}
-                        <!-- LAYER NR. 10 -->
-                        <div class="tp-caption tp_m_title tp-resizeme"
-                             data-x="center"
-                             data-hoffset="" 
-                             data-y="240" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="['25','25','18','18']" 
-                             data-lineheight="['25','25','18','18']"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-                            Luxury Suites
-                        </div>
-                        <!-- Overlay -->
-                        <div id="slider-11-slide-23-layer-1" data-type="shape" data-rsp_ch="on" data-text="w:normal;s:20,16,10,4;l:0,21,13,6;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_999="o:0;st:w;" style="z-index: 8; background-color: rgba(0, 0, 0, 0.5); color: rgb(255, 255, 255); width: 100%; height: 100%; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"> 
-                        </div>
-                    </li>
-                    
-                    <!-- SLIDE NR. 2 -->
-                    <li data-transition="crossfade">
-                        <!-- MAIN IMAGE -->
-                        <img src="{{ asset('user-uploads/carousel-images/'.$images[1]->file_name) }}" 
-                             alt="Image" 
-                             title="slider_bg2"
-                             data-bgposition="center center"
-                             data-bgfit="cover" 
-                             data-bgrepeat="no-repeat"
-                             data-bgparallax="10"
-                             class="rev-slidebg" 
-                             data-no-retina="">
-                        <!-- LAYER NR. 1 -->
-                        <div class="tp-caption tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="320" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="['60','50','40','25']" 
-                             data-lineheight="['60','50','40','25']"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 5; color: #fff; font-weight: 900;">ENJOY YOUR HOLIDAYS HERE
-                        </div>
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption tp-resizeme"
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="410" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="16" 
-                             data-lineheight="16"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 6; color: #fff;">Serene Environment
-                        </div>
-                        <!-- LAYER NR. 3 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="-134" 
-                             data-y="414"
-                             data-voffset=""
-                             data-width="['100']" 
-                             data-height="['4']"
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
-                             data-transform_out="opacity:0;s:300;" 
-                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2000" 
-                             data-responsive_offset="on"
-                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
-                        </div>
-                        <!-- LAYER NR. 4 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="-134"
-                             data-y="418"
-                             data-voffset=""
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
-                             data-transform_out="opacity:0;s:300;" 
-                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
-                             data-start="2100" 
-                             data-responsive_offset="on" 
-                             style="z-index: 8;background: url(images/icons/wave_white.svg);">
-                        </div>
-                        <!-- LAYER NR. 5 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="134" 
-                             data-y="414"
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-width="['100']"
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
-                             data-transform_out="opacity:0;s:300;" 
-                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2000" 
-                             style="z-index: 9;background: url(images/icons/wave_white.svg);">
-                        </div>
-                        <!-- LAYER NR. 6 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center"
-                             data-hoffset="134"
-                             data-y="418" 
-                             data-voffset=""
-                             data-width="['100']"
-                             data-height="['4']"
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;"
-                             data-transform_out="opacity:0;s:300;" 
-                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2100" 
-                             data-responsive_offset="on" 
-                             style="z-index: 10;background: url(images/icons/wave_white.svg);">
-                        </div>
-                       <!-- LAYER NR. 7 -->
-                       <a class="tp-caption button btn_yellow" 
-                          href="booking-form.html"
-                          data-x="center" 
-                          data-hoffset="-100"
-                          data-y="480"
-                          data-voffset=""
-                          data-responsive_offset="on" 
-                          data-fontsize="14" 
-                          data-whitespace="nowrap"
-                          data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                          style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
-                        </a>  
-                        <!-- LAYER NR. 8 -->
-                        <a class="tp-caption button btn_yellow "
-                           href="contact.html"
-                           data-x="center" 
-                           data-hoffset="108"
-                           data-y="480" 
-                           data-voffset=""
-                           data-responsive_offset="on" 
-                           data-fontsize="14" 
-                           data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                           style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
-                        </a>
-                        <!-- LAYER NR. 9 -->
-                        {{-- <div class="tp-caption tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="200"
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 12;"><img src="{{ $frontThemeSettings->logo_url }}" width="200" alt="Image">
-                        </div> --}}
-                        <!-- Overlay -->
-                        <div id="slider-11-slide-23-layer-1" data-type="shape" data-rsp_ch="on" data-text="w:normal;s:20,16,10,4;l:0,21,13,6;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_999="o:0;st:w;" style="z-index: 8; background-color: rgba(0, 0, 0, 0.5); color: rgb(255, 255, 255); width: 100%; height: 100%; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"> 
-                        </div>
-                    </li>
-                    
-                    <!-- SLIDE NR. 3 -->
-                    <li data-transition="crossfade">
-                        <!-- MAIN IMAGE -->
-                        <img src="{{ asset('user-uploads/carousel-images/'.$images[2]->file_name) }}" 
-                             alt="Image" 
-                             title="slider_bg3"
-                             data-bgposition="center center"
-                             data-bgfit="cover" 
-                             data-bgrepeat="no-repeat"
-                             data-bgparallax="10" 
-                             class="rev-slidebg"
-                             data-no-retina="">
-                        <!-- LAYER NR. 1 -->
-                        <div class="tp-caption tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="" 
-                             data-y="305" 
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="['80','70','60','40']" 
-                             data-lineheight="['80','70','60','40']"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 5; color: #fff; font-weight: 900;">Treat Your Family
-                        </div>
-                        <!-- LAYER NR. 2 -->
-                        <div class="tp-caption tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset=""
-                             data-y="410"
-                             data-voffset=""
-                             data-responsive_offset="on" 
-                             data-fontsize="16" 
-                             data-lineheight="16"
-                             data-whitespace="nowrap"
-                             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                             style="z-index: 6; color: #fff;">Family Room from Ksh 10000
-                        </div>
-                        <!-- LAYER NR. 3 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="-180" 
-                             data-y="414" 
-                             data-voffset=""
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:300;" 
-                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;"
-                             data-start="2300" 
-                             data-responsive_offset="on" 
-                             style="z-index: 7;background: url(images/icons/wave_white.svg);"> 
-                        </div>
-                        <!-- LAYER NR. 4 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center"
-                             data-hoffset="-180" 
-                             data-y="418" 
-                             data-voffset=""
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:300;"
-                             data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2400" 
-                             data-responsive_offset="on" 
-                             style="z-index: 8;background: url(images/icons/wave_white.svg);"> 
-                        </div>
-                        <!-- LAYER NR. 5 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center"
-                             data-hoffset="180"
-                             data-y="414" 
-                             data-voffset=""
-                             data-width="['100']"
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2300" 
-                             data-responsive_offset="on" 
-                             style="z-index: 9;background: url(images/icons/wave_white.svg);">
-                        </div>
-                        <!-- LAYER NR. 6 -->
-                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" 
-                             data-x="center" 
-                             data-hoffset="180"
-                             data-y="418" 
-                             data-voffset=""
-                             data-width="['100']" 
-                             data-height="['4']" 
-                             data-transform_idle="o:1;" 
-                             data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" 
-                             data-transform_out="opacity:0;s:300;" 
-                             data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-                             data-start="2400" 
-                             data-responsive_offset="on" 
-                             style="z-index: 10;background: url(images/icons/wave_white.svg);"> 
-                        </div>
-                        <!-- Overlay -->
-                        <div id="slider-11-slide-23-layer-1" data-type="shape" data-rsp_ch="on" data-text="w:normal;s:20,16,10,4;l:0,21,13,6;" data-dim="w:100%;h:100%;" data-basealign="slide" data-frame_999="o:0;st:w;" style="z-index: 8; background-color: rgba(0, 0, 0, 0.5); color: rgb(255, 255, 255); width: 100%; height: 100%; min-height: 0px; min-width: 0px; max-height: none; max-width: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true"> 
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
+<div id="classic_slider" class="rev_slider" style="display:none" data-version="5.4.5">
+<ul>
+
+<li data-transition="crossfade">
+
+<img src="{{ asset('assets/img/slider-1.png') }}" alt="Image" title="slider_bg2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;"> STANJO SUITES HOTEL </div>
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Expirience the difference</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" data-x="center" data-hoffset="-170" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-170" data-y="418" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2100" style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="170" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="170" data-y="418" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+</div>
+
+<a class="tp-caption button btn_blue" href="booking-form.html" data-x="center" data-hoffset="-100" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
+</a>
+
+<a class="tp-caption button btn_yellow " href="contact.html" data-x="center" data-hoffset="108" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
+</a>
+
+<div class="tp-caption tp_m_title tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-fontsize="['18','18','16','16']" data-lineheight="['18','18','16','16']" data-whitespace="nowrap" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+<i class="fa fa-star-o"></i>
+<i class="fa fa-star-o"></i>
+<i class="fa fa-star-o"></i>
+<i class="fa fa-star-o"></i>
+<i class="fa fa-star-o"></i>
+</div>
+
+<div class="tp-caption tp_m_title tp-resizeme" data-x="center" data-hoffset="" data-y="240" data-voffset="" data-responsive_offset="on" data-fontsize="['25','25','18','18']" data-lineheight="['25','25','18','18']" data-whitespace="nowrap" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+ Luxury Hotel
+</div>
+</li>
+
+<li data-transition="crossfade">
+
+<img src="{{ asset('assets/img/full-slider-2.png') }}" alt="Image" title="slider_bg2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidbg" data-no-retina="">
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','25']" data-lineheight="['60','50','40','25']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">ENJOY YOUR HOLIDAY WITH US
+</div>
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-134" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2000" data-responsive_offset="on" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-134" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2100" data-responsive_offset="on" style="z-index: 8;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="134" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 9;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="134" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" data-responsive_offset="on" style="z-index: 10;background: url(images/icons/wave_white.svg);">
+</div>
+
+<a class="tp-caption button btn_yellow" href="booking-form.html" data-x="center" data-hoffset="-100" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
+</a>
+
+<a class="tp-caption button btn_yellow " href="contact.html" data-x="center" data-hoffset="108" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
+</a>
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;">
+</div>
+</li>
+
+<li data-transition="crossfade">
+
+<img src="{{ asset('assets/img/slider3.png') }}" alt="Image" title="slider_bg3" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="305" data-voffset="" data-responsive_offset="on" data-fontsize="['80','70','60','40']" data-lineheight="['80','70','60','40']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">TOUCH THE DREAM
+</div>
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Family Room from €89 per night
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-180" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2300" data-responsive_offset="on" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-180" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2400" data-responsive_offset="on" style="z-index: 8;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="180" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2300" data-responsive_offset="on" style="z-index: 9;background: url(images/icons/wave_white.svg);">
+</div>
+
+<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="180" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2400" data-responsive_offset="on" style="z-index: 10;background: url(images/icons/wave_white.svg);">
+</div>
+</li>
+</ul>
+</div>
+
         
-             <!-- ========== HORIZONTAL BOOKING FORM ========== -->
-             {{-- <div class="hbf">
+             <!-- ========== HORIZONTAL BOOKING FORM 
+             <div class="hbf">
                 <div class="container">
                     <div class="inner">
                         <form id="booking-form">
@@ -522,7 +207,8 @@
                         </form>
                     </div>
                 </div>
-            </div> --}}
+            </div> 
+            ========== -->
 
             <!-- ========== ABOUT & ROOMS ========== -->
             <section id="about_rooms">
@@ -540,12 +226,12 @@
                                         <article class="room">
                                             <figure>
                                                 <div class="price">Ksh 6500 <span>/night</span></div>
-                                                <a class="hover_effect h_blue h_link" href="room.html">
-                                                    <img src="{{ asset('assets/img/single-room.jpg') }}" class="img-responsive" alt="Image">
+                                                <a class="hover_effect h_blue h_link" href="{{ route('front.rooms.index') }}">
+                                                    <img src="{{ asset('assets/img/gallery13.jpg') }}" class="img-responsive" alt="Image">
                                                 </a>
                                                 <figcaption>
                                                     <h5><a href="room.html">Single Room</a></h5>
-                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW ROOMS</a></span>
                                                 </figcaption>
                                             </figure>
                                         </article>
@@ -554,12 +240,12 @@
                                         <article class="room">
                                             <figure>
                                                 <div class="price">Ksh 8500 <span>/night</span></div>
-                                                <a class="hover_effect h_blue h_link" href="room.html">
-                                                    <img src="{{ asset('assets/img/single-room.jpg') }}" class="img-responsive" alt="Image">
+                                                <a class="hover_effect h_blue h_link" href="{{ route('front.rooms.index') }}">
+                                                    <img src="{{ asset('assets/img/stanjoroom.jpg') }}" class="img-responsive" alt="Image">
                                                 </a>
                                                 <figcaption>
                                                     <h5><a href="room.html">Double Room</a></h5>
-                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW ROOMS</a></span>
                                                 </figcaption>
                                             </figure>
                                         </article>
@@ -568,12 +254,12 @@
                                         <article class="room">
                                             <figure>
                                                 <div class="price"> Ksh 12500 <span>/night</span></div>
-                                                <a class="hover_effect h_blue h_link" href="room.html">
-                                                    <img src="{{ asset('assets/img/single-room.jpg') }}" class="img-responsive" alt="Image">
+                                                <a class="hover_effect h_blue h_link" href="{{ route('front.rooms.index') }}">
+                                                    <img src="{{ asset('assets/img/stanjohotel.jpg') }}" class="img-responsive" alt="Image">
                                                 </a>
                                                 <figcaption>
                                                     <h5><a href="room.html">Twin Room</a></h5>
-                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW DETAILS</a></span>
+                                                    <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW ROOMS</a></span>
                                                 </figcaption>
                                             </figure>
                                         </article>
@@ -633,6 +319,7 @@
                                         <p>Often, we have international guests checking in at Stanjo. We always want to give them a warm welcome right from the airport, thanks to our airport transfer services</p>
                                     </div>
                                 </div>
+                                <span class="f_right"><a href="{{ route('front.rooms.index') }}" class="button btn_xs btn_blue">VIEW ROOMS</a></span>
                             </div>
                         </div>
                     </div>
@@ -640,92 +327,92 @@
             </section>
 
             <!-- ========== GALLERY ========== -->
-            {{-- <section id="gallery" class="blue_bg">
+             <section id="gallery" class="blue_bg">
                 <div class="container">
                     <div class="main_title mt_wave mt_white a_center">
-                        <h2>ZANTE GALLERY PHOTOS</h2>
+                        <h2>Stanjo Hotel Gallery </h2>
                     </div> 
-                        <p class="main_description md_white a_center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p> 
+                       
                 </div>
                 <div id="gallery_slider" class="owl-carousel image-gallery">
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery1.jpg">
-                            <img src="images/gallery/gallery1.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery4.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery4.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery2.jpg">
-                            <img src="images/gallery/gallery2.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery5.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery5.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery3.jpg">
-                            <img src="images/gallery/gallery3.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery6.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery6.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery4.jpg">
-                            <img src="images/gallery/gallery4.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery7.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery7.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery5.jpg">
-                            <img src="images/gallery/gallery5.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery9.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery8.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery6.jpg">
-                            <img src="images/gallery/gallery6.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery10.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery10.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery7.jpg">
-                            <img src="images/gallery/gallery7.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/galler11.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery11.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- ITEM -->
                     <div class="item">
-                        <a class="hover_effect h_yellow h_lightbox" href="images/gallery/gallery8.jpg">
-                            <img src="images/gallery/gallery8.jpg" alt="Image">
+                        <a class="hover_effect h_yellow h_lightbox" href="{{ asset('assets/img/gallery12.jpg') }}">
+                            <img src="{{ asset('assets/img/gallery12.jpg') }}" alt="Image">
                         </a>
                         <div class="gallery_item_info">
-                            <h4>Rooms Service</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                     </div>
                     <!-- END ITEM -->
@@ -733,19 +420,19 @@
 
                 <div class="container">
                     <div class="mt40 a_center">
-                        <a class="button btn_sm btn_dark upper" href="gallery.html">View Full Gallery</a>
+                        <a class="button btn_sm btn_dark upper" href="gallery">View Full Gallery</a>
                     </div>
                 </div>
 
-            </section> --}}
+            </section> 
 
             <!-- ========== TESTIMONIALS ========== -->
             <section id="testimonials_style_2" class="grey_bg">
                 <div class="container">
                     <div class="main_title mt_wave a_center">
-                        <h2>WHAT PEOPLE SAY ABOUT US</h2>
+                        <h2>What clients say about us</h2>
                     </div> 
-                        <p class="main_description a_center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p> 
+                        <p class="main_description a_center"></p> 
                     <div class="row">
                         <!-- ITEM -->
                         <div class="col-md-4">
@@ -759,13 +446,13 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                                    <p>Very homely. Very peaceful, I triple recommend this place for anyone who wants to get away to write, rejuvenate, recollect or just get away from the city noise. </p>
                                 </div>
                                 <div class="review_author">
                                     <img src="images/users/user1.jpg" alt="Image">
                                     <div class="author_info">
-                                        <h5>John Doe</h5>
-                                        <span class="place">Athens, Greece</span>
+                                        <h5>Patrick</h5>
+                                        <span class="place">Karem, Nairobi </span>
                                     </div>
                                 </div>
                             </div>
@@ -782,13 +469,14 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                                    <p>Best place for a vacation..friendly service, nice meals, ample parking..
+ </p>
                                 </div>
                                 <div class="review_author">
                                     <img src="images/users/user2.jpg" alt="Image">
                                     <div class="author_info">
-                                        <h5>Ina Aldrich</h5>
-                                        <span class="place">Athens, Greece</span>
+                                        <h5>Ann </h5>
+                                        <span class="place">Parklands, Nairobi</span>
                                     </div>
                                 </div>
                             </div>
@@ -805,13 +493,13 @@
                                         <i class="fa fa-star" aria-hidden="true"></i>
                                         <i class="fa fa-star-o" aria-hidden="true"></i>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+                                    <p>Place is clean and very budget friendly at least for the moment I stayed there. The staff if friendly and very helpful. </p>
                                 </div>
                                 <div class="review_author">
                                     <img src="images/users/user3.jpg" alt="Image">
                                     <div class="author_info">
-                                        <h5>William W.</h5>
-                                        <span class="place">Athens, Greece</span>
+                                        <h5>William </h5>
+                                        <span class="place">Kajiado, Nairobi</span>
                                     </div>
                                 </div>
                             </div>
@@ -826,7 +514,7 @@
                     <div class="main_title mt_wave a_center">
                         <h2>LOCATION - CONTACT US</h2>
                     </div> 
-                  <p class="main_description a_center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit.</p> 
+                  <p class="main_description a_center">Need help? talk to our customer care.</p> 
                     <div class="row">
                         <div class="col-md-6">
                             <div id="map-canvas"></div>
@@ -837,13 +525,13 @@
                                     <div class="col-md-6 col-sm-6">
                                         <div class="contact-item">
                                             <i class="glyphicon glyphicon-phone-alt"></i>
-                                            <h6 class="text-center">{{ $settings->company_phone }}</h6>
+                                            <h6 class="text-center"> +254 733 960752  </h6>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="contact-item">
                                             <i class="fa fa-envelope"></i>
-                                            <h6 class="text-center">{{ $settings->company_email }}</h6>
+                                            <h6 class="text-center"> sales@stanjokarensuites.com</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -867,7 +555,7 @@
             </section>
             
             <!-- ========== SUBSCRIBE ========== -->
-            {{-- <section id="subscribe" class="gradient_overlay">
+        <section id="subscribe" class="gradient_overlay">
                 <div class="inner">
                     <div class="container">
                         <div class="main_title mt_wave mt_white a_center">
@@ -882,6 +570,6 @@
                         </form> 
                     </div>
                 </div>
-            </section> --}}
+            </section>
 
 @endsection

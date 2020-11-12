@@ -191,6 +191,14 @@ Route::group(
 
     Route::get('/deal/{dealId}/{dealSlug}', ['uses' => 'FrontController@dealDetail'])->name('dealDetail');
 
-    Route::get('/{slug}', ['uses' => 'FrontController@page'])->name('page');
+    Route::get('/aboutus', ['uses' => 'FrontController@aboutus'])->name('aboutus');
+
+    Route::get('/gallery', ['uses' => 'FrontController@gallery'])->name('gallery');
+
+    Route::get('/contactus', ['uses' => 'FrontController@contactus'])->name('contactus');
+
+    Route::get('/ourservices', ['uses' => 'FrontController@ourservices'])->name('ourservices');
+
+    // Route::get('/{slug}', ['uses' => 'FrontController@page'])->name('page');
   }
 );
