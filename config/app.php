@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Appointo'),
+    'name' => env('APP_NAME', 'Stanjo'),
     'envato_item_id' => 22989501,
 
     /*
