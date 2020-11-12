@@ -2019,9 +2019,9 @@ button {
 }
 
 .top_menu {
-    background: #605750;
+    background: #fbb682;
     border-bottom: 1px solid #ededed;
-    color: #a9a9a9;
+    color: #fff;
 }
 
 .top_menu.transparent {
@@ -2053,7 +2053,7 @@ button {
 }
 
 .top_menu a {
-    color: #a9a9a9;
+    color: #fff;
 }
 
 .top_menu a:hover,
@@ -2190,7 +2190,7 @@ button {
 /* ---------- 4.1 Header ---------- */
 header {
     width: 100%;
-    background: #fff;
+    background: #000;
     border-bottom: 1px solid #e6eff2;
     z-index: 9999;
 }
@@ -2303,7 +2303,7 @@ header .navbar-header .mobile_menu_btn.active .icon-bar:nth-of-type(3) {
 }
 
 #main_menu .navbar-nav li a {
-    color: #a1b1c1;
+    color: #fff;
     font-size: 0.95em;
     font-weight: 900;
     letter-spacing: 0.05em;
@@ -2335,7 +2335,7 @@ header .navbar-header .mobile_menu_btn.active .icon-bar:nth-of-type(3) {
 }
 
 #main_menu .navbar-nav li a {
-    color: #a1b1c1;
+    color: #fff;
 }
 
 #main_menu .navbar-nav li a:hover,
@@ -3800,9 +3800,9 @@ footer {
 }
 
 footer.dark {
-    background-color: #272727;
-    border-top-color: #272727;
-    color: #aaa;
+    background-color: #000000;
+    border-top-color: #000000;
+    color: #fff;
 }
 
 footer .inner {
