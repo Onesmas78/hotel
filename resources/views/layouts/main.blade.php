@@ -26,7 +26,8 @@
 
 
     <script src="{{ asset('js/app.js') }}"></script>
-    {{-- <script src="{{ asset('assets/js/front-scripts.js') }}"></script> --}}
+    {{-- <script src="{{ asset('assets/js/front-scripts.js') }}"></script>
+    --}}
 
     <style>
         :root {
@@ -106,11 +107,13 @@
                         <li class="mobile_menu_title" style="display:none;">MENU</li>
                         <li class="dropdown simple_menu active">
                             <a href="/" class="menu_button" data-toggle="dropdown">HOME</a>
-                             
+
                         </li>
-                         <li class="dropdown simple_menu">
-                            <a href="{{ route('front.rooms.index') }}" class="" data-toggle="">ROOMS <b class="caret"></b></a></li>
-                            <!--
+                        <li class="dropdown simple_menu">
+                            <a href="{{ route('front.rooms.index') }}" class="" data-toggle="">ROOMS <b
+                                    class="caret"></b></a>
+                        </li>
+                        <!--
                             <ul class="dropdown-menu">
                                 <li><a href="rooms-list.html">Rooms List View</a></li>
                                 <li><a href="rooms-grid.html">Rooms Grid View</a></li>
@@ -120,20 +123,19 @@
                             </ul>
                         </li>
                         -->
-                                           
+
                         <li><a href="{{ route('front.ourservices') }}">OUR SERVICES</a></li>
                         <li><a href="{{ route('front.aboutus') }}">ABOUT US</a></li>
                         <li><a href="{{ route('front.contactus') }}">CONTACT US</a></li>
-                        
-                        
+
+
                         <li class="menu_button">
                             <a href="{{ route('front.rooms.index') }}" class="button  btn_yellow"><i
                                     class="fa fa-calendar"></i>BOOK ONLINE</a>
                         </li>
-                        
+
                         <li>
-                            <a href="{{ route('front.cartPage') }}"><i
-                                    class="fa fa-cart"></i>CART</a>
+                            <a href="{{ route('front.cartPage') }}"><i class="fa fa-shopping-cart"></i></a>
                         </li>
                     </ul>
                 </nav>
@@ -142,7 +144,7 @@
 
         @yield('content')
 
-    <!-- ========== FOOTER ========== -->
+        <!-- ========== FOOTER ========== -->
 
         <footer class="dark">
             <div class="inner">
@@ -150,7 +152,7 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 widget">
                             <div class="about">
-                                <a href="index.html"><img class="logo" src="{{ $frontThemeSettings->logo_url }}"
+                                <a href="/"><img class="logo" src="{{ $frontThemeSettings->logo_url }}"
                                         height="80" alt="Logo"></a>
                                 <p>Over looking Ngong Hills and the leafy suburbs of Karen, Stanjo Karen Suites is a
                                     family-owned hotel facility situated in a serene environment.</p>
@@ -162,7 +164,7 @@
                                 <li><a href="{{ route('front.aboutus') }}">About us</a></li>
                                 <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
                                 <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
-                                <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                                <li><a href="{{ route('front.cartPage') }}">Cart</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">
@@ -171,7 +173,7 @@
                                 <li><a href="{{ route('front.aboutus') }}">About us</a></li>
                                 <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
                                 <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
-                                <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                                <li><a href="{{ route('front.cartPage') }}">Cart</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">
