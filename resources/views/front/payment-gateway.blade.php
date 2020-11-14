@@ -82,15 +82,13 @@
                     <div class="payment-type">
                         <h5>@lang('front.paymentMethod')</h5>
                         <div class="payments">
-                            @if($credentials->stripe_status == 'active' && $booking->amount_to_pay > 0)
-                            <a href="javascript:;" id="stripePaymentButton" class="btn btn-custom btn-blue"><i class="fa fa-cc-stripe mr-2"></i>@lang('front.buttons.stripe')</a>
-                            @endif
+                            
+                            <a href="javascript:;" class="btn btn-custom btn-blue"><i class="fa fa-credit-card mr-2"></i> MPESA</a>
+                            
                             @if($credentials->paypal_status == 'active' && $booking->amount_to_pay > 0)
                             <a href="{{ route('front.paypal') }}" class="btn btn-custom btn-blue"><i class="fa fa-paypal mr-2"></i>@lang('front.buttons.paypal')</a>
                             @endif
-                            @if($credentials->razorpay_status == 'active' && $booking->amount_to_pay > 0)
-                            <a href="javascript:startRazorPayPayment();" class="btn btn-custom btn-blue"><i class="fa fa-credit-card mr-2"></i>@lang('front.buttons.razorpay')</a>
-                            @endif
+                            
                             @if($credentials->offline_payment == 1)
                             <a href="{{ route('front.offline-payment') }}" class="btn btn-custom btn-blue"><i class="fa fa-money mr-2"></i>@lang('front.buttons.offlinePayment')</a>
                             @endif

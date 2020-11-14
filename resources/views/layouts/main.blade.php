@@ -25,9 +25,9 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
 
 
-    <script src="{{ asset('js/app.js') }}"></script>
-    {{-- <script src="{{ asset('assets/js/front-scripts.js') }}"></script>
-    --}}
+    <script src="{{ asset('assets/js/front-scripts.js') }}"></script>
+    
+   
 
     <style>
         :root {
@@ -60,22 +60,18 @@
                             {{ $settings->company_phone }} </a></li>
                     <li class="email hidden-xxs"><i class="fa fa-envelope-o "></i> <a
                             href="mailto:{{ $settings->company_email }}">{{ $settings->company_email }}</a></li>
-                    <li>
+                    <li class="dropdown simple_menu">
                         @if ($user)
                             <form id="logoutForm" action="{{ route('logout') }}" method="POST">
                                 @csrf
-                                <div class="dropdown simple-menu">
-                                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"
-                                        aria-expanded="false">{{ $user->name }}<span class="fa fa-caret-down"></span>
-                                    </a>
+                                <a href="javascript:;" data-hover="dropdown" class="dropdown-toggle" data-toggle="dropdown">{{ $user->name }} <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li class="dropdown-item"> <a href="{{ route('admin.dashboard') }}">
+                                        <li > <a href="{{ route('admin.dashboard') }}">
                                                 <i class="fa fa-user"></i> @lang('front.myAccount')</a></li>
-                                        <li class="dropdown-item"> <a href="javascript:;"
+                                        <li > <a href="javascript:;"
                                                 onclick="event.preventDefault(); document.getElementById('logoutForm').submit();">
                                                 <i class="fa fa-sign-out mr-2"> </i>@lang('app.logout')</a></li>
-                                    </ul>
-                                </div>
+                                    </ul>                                
                             </form>
                         @else
                             <a href="{{ route('login') }}">
@@ -105,24 +101,12 @@
                 <nav id="main_menu" class="mobile_menu navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="mobile_menu_title" style="display:none;">MENU</li>
-                        <li class="dropdown simple_menu active">
-                            <a href="/" class="menu_button" data-toggle="dropdown">HOME</a>
+                        <li ><a href="/" class="menu_button" data-toggle="dropdown">HOME</a>
 
                         </li>
-                        <li class="dropdown simple_menu">
-                            <a href="{{ route('front.rooms.index') }}" class="" data-toggle="">ROOMS <b
-                                    class="caret"></b></a>
+                        <li >
+                            <a href="{{ route('front.rooms.index') }}" >ROOMS</a>
                         </li>
-                        <!--
-                            <ul class="dropdown-menu">
-                                <li><a href="rooms-list.html">Rooms List View</a></li>
-                                <li><a href="rooms-grid.html">Rooms Grid View</a></li>
-                                <li><a href="rooms-block.html">Rooms Block View</a></li>
-                                <li><a href="room.html">Room Details 1</a></li>
-                                <li><a href="room2.html">Room Details 2</a></li>
-                            </ul>
-                        </li>
-                        -->
 
                         <li><a href="{{ route('front.ourservices') }}">OUR SERVICES</a></li>
                         <li><a href="{{ route('front.aboutus') }}">ABOUT US</a></li>
@@ -135,7 +119,8 @@
                         </li>
 
                         <li>
-                            <a href="{{ route('front.cartPage') }}"><i class="fa fa-shopping-cart"></i></a>
+                            <a href="{{ route('front.cartPage') }}"><i class="fa fa-shopping-cart"></i>
+                                <span class="">{{ $productsCount }}</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -235,7 +220,7 @@
     <div id="notification"></div>
 
     <!-- ========== JAVASCRIPT ========== -->
-    @stack('footer-script')
+    
     <script type="text/javascript" src="{{ asset('assets/stanjo/jquery.min.js') }}"></script>
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWEnbyzmLtVvA5Yk5vyN4DXS24AYZJDRM"></script>
@@ -256,7 +241,6 @@
     <script type="text/javascript" src="{{ asset('assets/stanjo/countUp.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/stanjo/jquery.countdown.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/stanjo/main.js') }}"></script>
-
     <!-- ========== REVOLUTION SLIDER ========== -->
     <script type="text/javascript" src="{{ asset('assets/revolution/js/jquery.themepunch.tools.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/revolution/js/jquery.themepunch.revolution.min.js') }}">
@@ -279,7 +263,7 @@
         src="{{ asset('assets/revolution/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
     <script type="text/javascript"
         src="{{ asset('assets/revolution/js/extensions/revolution.extension.video.min.js') }}"></script>
-    @push('footer-script')
+        
         <script>
             (function($) {
                 function logoutUser(e) {
@@ -346,9 +330,8 @@
             document.documentElement.style.setProperty('--dark-primary-color', '#' + DarkenColor(primaryColor, 15));
 
         </script>
-    @endpush
 
-
+    @stack('footer-script')
 </body>
 
 </html>

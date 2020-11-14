@@ -31,7 +31,7 @@ class BookerController extends Controller
     public function create(Request $request)
     {
         //
-        
+        return view('front.booker.create');
     }
 
     /**

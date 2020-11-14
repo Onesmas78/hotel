@@ -100,7 +100,6 @@
                 <th>#</th>
                 <th>@lang('app.item')</th>
                 <th>@lang('app.unitPrice')</th>
-                <th>@lang('app.quantity')</th>
                 <th class="text-right">@lang('app.amount')</th>
             </tr>
             </thead>
@@ -110,12 +109,6 @@
                     <td>{{ $key+1 }}.</td>
                     <td>{{ ucwords($item->businessService->name) }}</td>
                     <td>{{ $settings->currency->currency_symbol.number_format((float)$item->unit_price, 2, '.', '') }}</td>
-                    <td>x{{ $item->quantity }}</td>
-                    @if ($booking->deal_id!='')
-                        <td class="text-right">{{ $settings->currency->currency_symbol.number_format((float)($item->unit_price  * $item->quantity), 2, '.', '')}} x {{$booking->deal_quantity}} = {{ $settings->currency->currency_symbol.number_format((float)($item->unit_price  * $item->quantity * $booking->deal_quantity), 2, '.', '')}}</td>
-                    @else
-                        <td class="text-right">{{ $settings->currency->currency_symbol.number_format((float)($item->businessService->discounted_price  * $item->quantity), 2, '.', '')}}</td>
-                    @endif
                 </tr>
             @endforeach
             </tbody>
@@ -147,15 +140,11 @@
                             <div class="payment-type">
                                 <h5>@lang('front.paymentMethod')</h5>
                                 <div class="payments text-center">
-                                    @if($credentials->stripe_status == 'active')
-                                    <a href="javascript:;" id="stripePaymentButton" data-bookingId="{{ $booking->id }}" class="btn btn-custom btn-blue mb-2"><i class="fa fa-cc-stripe mr-2"></i>@lang('front.buttons.stripe')</a>
-                                    @endif
+                                    <a href="javascript:;" class="btn btn-custom btn-blue"><i class="fa fa-credit-card mr-2"></i> MPESA</a>
                                     @if($credentials->paypal_status == 'active')
                                     <a href="{{ route('front.paypal', $booking->id) }}" class="btn btn-custom btn-blue mb-2"><i class="fa fa-paypal mr-2"></i>@lang('front.buttons.paypal')</a>
                                     @endif
-                                    @if($credentials->razorpay_status == 'active')
-                                    <a href="javascript:startRazorPayPayment();" class="btn btn-custom btn-blue mb-2"><i class="fa fa-card mr-2"></i>@lang('front.buttons.razorpay')</a>
-                                    @endif
+                                    
                                     @if($credentials->offline_payment == 1)
                                     <a href="{{ route('front.offline-payment', $booking->id) }}" class="btn btn-custom btn-blue mb-2"><i class="fa fa-money mr-2"></i>@lang('app.offline')</a>
                                     @endif

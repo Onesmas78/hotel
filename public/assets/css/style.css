@@ -629,12 +629,11 @@ input:focus {
 
 .cart-badge {
     border-radius: 50%;
-    background-color: #d40303;
+    background-color: #fbb682;
     color: #fff;
     padding: 2px 5.5px;
     font-size: 9px;
     position: absolute;
-    top: -6px;
     right: 5px;
     text-align: center;
     -webkit-border-radius: 50%;

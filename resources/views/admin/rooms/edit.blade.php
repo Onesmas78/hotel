@@ -243,7 +243,7 @@
             url: "{{ route('admin.business-services.updateImages') }}",
             headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' },
             paramName: "file",
-            maxFilesize: 10,
+            maxFilesize: 20,
             maxFiles: 10,
             acceptedFiles: "image/*",
             autoProcessQueue: false,

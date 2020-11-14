@@ -50,7 +50,6 @@
                                 <tr>
                                     <th>@lang('front.table.headings.serviceName')</th>
                                     <th>@lang('front.table.headings.unitPrice')</th>
-                                    <th>@lang('front.table.headings.quantity')</th>
                                     <th>@lang('front.table.headings.subTotal')</th>
                                     @if (!is_null($products))
                                         <th>&nbsp;</th>
@@ -64,18 +63,7 @@
                                             <tr id="{{ $key }}">
                                                 <td>{{ $product['serviceName'] }}</td>
                                                 <td>{{ $settings->currency->currency_symbol.$product['servicePrice'] }}</td>
-                                                <td>
-                                                    <div class="qty-wrap">
-                                                        <div class="qty-elements">
-                                                            <a class="decrement_qty" href="javascript:void(0)" onclick="decreaseQuantity(this)">-</a>
-                                                        </div>
-                                                        <input onkeypress="return isNumberKey(event)" type="number" name="qty" value="{{ $product['serviceQuantity'] }}" title="Quantity"
-                                                            class="input-text qty" data-id="{{ $key }}" data-price="{{$product['servicePrice']}}" autocomplete="none" />
-                                                        <div class="qty-elements">
-                                                            <a class="increment_qty" href="javascript:void(0)" onclick="increaseQuantity(this)">+</a>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                                
                                                 <td class="sub-total">{{ $settings->currency->currency_symbol }}<span>{{ $product['serviceQuantity'] * $product['servicePrice'] }}</span></td>
                                                 <td>
                                                     <a title="@lang('front.table.deleteProduct')" href="javascript:;" onclick="deleteProduct(this, '{{ $key }}')" class="delete-btn">
