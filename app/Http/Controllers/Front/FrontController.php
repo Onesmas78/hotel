@@ -1123,6 +1123,12 @@ class FrontController extends Controller
     return View('front.ourservices');
 
 }
+
+public function ourteam(){
+    
+    return View('front.ourteam');
+
+}
 }
 
 /* End of main class */

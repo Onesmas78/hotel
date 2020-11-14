@@ -152,7 +152,7 @@
                         <li><a href="{{ route('front.aboutus') }}">About us</a></li>
                         <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
                         <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
-                        <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                        <li><a href="{{ route('front.cartPage') }}">Cart</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 widget">
@@ -161,7 +161,7 @@
                         <li><a href="{{ route('front.aboutus') }}">About us</a></li>
                         <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
                         <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
-                        <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                        <li><a href="{{ route('front.cartPage') }}">Cart</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 widget">

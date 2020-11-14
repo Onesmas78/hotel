@@ -199,6 +199,8 @@ Route::group(
 
     Route::get('/ourservices', ['uses' => 'FrontController@ourservices'])->name('ourservices');
 
+    Route::get('/ourteam', ['uses' => 'FrontController@ourteam'])->name('ourteam');
+
     // Route::get('/{slug}', ['uses' => 'FrontController@page'])->name('page');
   }
 );

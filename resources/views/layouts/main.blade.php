@@ -97,43 +97,47 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">
-                        <img src="{{ $frontThemeSettings->logo_url }}" height="32" alt="Logo">
-                    </a>
+                    <a href="/"><img class="logo_light" src="{{ asset('assets/img/logo_light.png') }}"height="80" alt="logo_light"></a>
+                                        
+                                    
                 </div>
                 <nav id="main_menu" class="mobile_menu navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="mobile_menu_title" style="display:none;">MENU</li>
                         <li class="dropdown simple_menu active">
-                            <a href="/" class="menu_button" data-toggle="dropdown">HOME</a>
+                            <a href="#" class="menu_button" data-toggle="dropdown">HOME</a>
                              
                         </li>
                          <li class="dropdown simple_menu">
-                            <a href="{{ route('front.rooms.index') }}" class="" data-toggle="">ROOMS <b class="caret"></b></a></li>
-                            <!--
-                            <ul class="dropdown-menu">
-                                <li><a href="rooms-list.html">Rooms List View</a></li>
-                                <li><a href="rooms-grid.html">Rooms Grid View</a></li>
-                                <li><a href="rooms-block.html">Rooms Block View</a></li>
-                                <li><a href="room.html">Room Details 1</a></li>
-                                <li><a href="room2.html">Room Details 2</a></li>
-                            </ul>
-                        </li>
-                        -->
+                            <a href="" class="" data-toggle="">ROOMS <b class="caret"></b></a>
+                                
+                           
+                        
                                            
                         <li><a href="{{ route('front.ourservices') }}">OUR SERVICES</a></li>
-                        <li><a href="{{ route('front.aboutus') }}">ABOUT US</a></li>
+
+                        <li class="dropdown simple_menu">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">OUR COMPANY <b class="caret"></b></a>
+                               <ul class="dropdown-menu">
+                               <li><a href="{{ route('front.aboutus') }}">About Us</a></li>
+                                 <li><a href="{{ route('front.ourteam') }}">Our Team</a></li>
+                                    <li><a href="">Faq</a></li>
+                                     <li><a href="{{ route('front.contactus') }}">Investors</a></li>
+
+                                     </ul>
+
+                        
+
+                       
+                        
+                            
+                        
                         <li><a href="{{ route('front.contactus') }}">CONTACT US</a></li>
                         
                         
                         <li class="menu_button">
                             <a href="{{ route('front.rooms.index') }}" class="button  btn_yellow"><i
                                     class="fa fa-calendar"></i>BOOK ONLINE</a>
-                        </li>
-                        
-                        <li>
-                            <a href="{{ route('front.cartPage') }}"><i
-                                    class="fa fa-cart"></i>CART</a>
                         </li>
                     </ul>
                 </nav>
@@ -150,8 +154,8 @@
                     <div class="row">
                         <div class="col-md-3 col-sm-6 widget">
                             <div class="about">
-                                <a href="index.html"><img class="logo" src="{{ $frontThemeSettings->logo_url }}"
-                                        height="80" alt="Logo"></a>
+                                <a href="/"><img class="logo" src="{{ asset('assets/img/logo_light.png') }}"
+                                        height="80" alt="logo"></a>
                                 <p>Over looking Ngong Hills and the leafy suburbs of Karen, Stanjo Karen Suites is a
                                     family-owned hotel facility situated in a serene environment.</p>
                             </div>
@@ -159,19 +163,21 @@
                         <div class="col-md-3 col-sm-6 widget">
                             <h5>Useful Links</h5>
                             <ul class="useful_links">
-                                <li><a href="{{ route('front.aboutus') }}">About us</a></li>
-                                <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
-                                <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
-                                <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Location</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">
                             <h5>Useful Links</h5>
                             <ul class="useful_links">
-                                <li><a href="{{ route('front.aboutus') }}">About us</a></li>
-                                <li><a href="{{ route('front.contactus') }}">Contact us</a></li>
-                                <li><a href="{{ route('front.ourservices') }}">Our Services</a></li>
-                                <li><a href="{{ route('front.cart') }}">Cart</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Location</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-sm-6 widget">

@@ -5,103 +5,73 @@
 @section('content')
 
 
-<div id="classic_slider" class="rev_slider" style="display:none" data-version="5.4.5">
+<section id="slider" class="full_slider">
+<div class="rev_slider_wrapper fullscreen-container">
+<div id="fullscreen_slider" class="rev_slider fullscreenbanner gradient_slider" style="display:none" data-version="5.4.5">
 <ul>
+    
 
-<li data-transition="crossfade">
+<li data-transition="fade">
+    
 
-<img src="{{ asset('assets/img/slider-1.png') }}" alt="Image" title="slider_bg2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+<img src="{{ asset('assets/img/full-slider-1.jpg') }}" alt="Image" title="slider_bg1-1" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
 
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;"> STANJO SUITES HOTEL </div>
 
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Expirience the difference</div>
 
-<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" data-x="center" data-hoffset="-170" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="middle" data-voffset="['-30','-30','-30','-30']" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">MODERN & SPACIOUS ROOMS
 </div>
 
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-170" data-y="418" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2100" style="z-index: 7;background: url(images/icons/wave_white.svg);"> </div>
 
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="170" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 7;background: url(images/icons/wave_white.svg);">
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="middle" data-voffset="['45','45','45','45']" data-fontsize="['16', '16', '14', '12']" data-lineheight="['16', '16', '14', '12']" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:300;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="3000" data-splitin="chars" data-splitout="none" data-basealign="slide" data-responsive="off" data-elementdelay="0.05" style="z-index: 9; font-weight: 400; color: rgba(255, 255, 255, 0.8); font-family: Raleway;">Enjoy your time in Stanjo Suites Hotel
 </div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="170" data-y="418" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:500;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" style="z-index: 7;background: url(images/icons/wave_white.svg);">
-</div>
-
 <a class="tp-caption button btn_blue" href="booking-form.html" data-x="center" data-hoffset="-100" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
 </a>
 
 <a class="tp-caption button btn_yellow " href="contact.html" data-x="center" data-hoffset="108" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
 </a>
-
-<div class="tp-caption tp_m_title tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-fontsize="['18','18','16','16']" data-lineheight="['18','18','16','16']" data-whitespace="nowrap" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-<i class="fa fa-star-o"></i>
-</div>
-
-<div class="tp-caption tp_m_title tp-resizeme" data-x="center" data-hoffset="" data-y="240" data-voffset="" data-responsive_offset="on" data-fontsize="['25','25','18','18']" data-lineheight="['25','25','18','18']" data-whitespace="nowrap" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
- Luxury Hotel
-</div>
 </li>
 
-<li data-transition="crossfade">
 
-<img src="{{ asset('assets/img/full-slider-2.png') }}" alt="Image" title="slider_bg2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidbg" data-no-retina="">
 
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="320" data-voffset="" data-responsive_offset="on" data-fontsize="['60','50','40','25']" data-lineheight="['60','50','40','25']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">ENJOY YOUR HOLIDAY WITH US
+
+<li data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="1000">
+
+<img src="{{ asset('assets/img/full-slider-2.jpg') }}" alt="Image" title="slider_bg1-2" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="middle" data-voffset="['-30','-30','-30','-30']" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">Welcome to Stanjo Suites Hotel
 </div>
 
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="middle" data-voffset="['45','45','45','45']" data-fontsize="['16', '16', '14', '12']" data-lineheight="['16', '16', '14', '12']" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:300;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="3000" data-splitin="chars" data-splitout="none" data-basealign="slide" data-responsive="off" data-elementdelay="0.05" style="z-index: 9; font-weight: 400; color: rgba(255, 255, 255, 0.8); font-family: Raleway;">Experience the diference
 </div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-134" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2000" data-responsive_offset="on" style="z-index: 7;background: url(images/icons/wave_white.svg);">
-</div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-134" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2100" data-responsive_offset="on" style="z-index: 8;background: url(images/icons/wave_white.svg);">
-</div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="134" data-y="414" data-voffset="" data-responsive_offset="on" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2000" style="z-index: 9;background: url(images/icons/wave_white.svg);">
-</div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="134" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1500;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2100" data-responsive_offset="on" style="z-index: 10;background: url(images/icons/wave_white.svg);">
-</div>
-
-<a class="tp-caption button btn_yellow" href="booking-form.html" data-x="center" data-hoffset="-100" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
+<a class="tp-caption button btn_blue" href="booking-form.html" data-x="center" data-hoffset="-100" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
 </a>
 
-<a class="tp-caption button btn_yellow " href="contact.html" data-x="center" data-hoffset="108" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
+<a class="tp-caption button btn_yellow " href="contact.html" data-x="center" data-hoffset="108" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
 </a>
-
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="200" data-voffset="" data-responsive_offset="on" data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 12;">
-</div>
 </li>
 
-<li data-transition="crossfade">
+<li data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="1000">
 
-<img src="{{ asset('assets/img/slider3.png') }}" alt="Image" title="slider_bg3" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
+<img src="{{ asset('assets/img/full-slider-3.jpg') }}" alt="Image" title="slider_bg1-3" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina="">
 
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="305" data-voffset="" data-responsive_offset="on" data-fontsize="['80','70','60','40']" data-lineheight="['80','70','60','40']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">TOUCH THE DREAM
+<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="middle" data-voffset="['-30','-30','-30','-30']" data-responsive_offset="on" data-fontsize="['60','50','40','30']" data-lineheight="['60','50','40','30']" data-whitespace="nowrap" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 5; color: #fff; font-weight: 900;">Outside Catering
 </div>
 
-<div class="tp-caption tp-resizeme" data-x="center" data-hoffset="" data-y="410" data-voffset="" data-responsive_offset="on" data-fontsize="16" data-lineheight="16" data-whitespace="nowrap" data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 6; color: #fff;">Family Room from €89 per night
+<div class="tp-caption tp-resizeme" data-x="['center','center','center','center']" data-hoffset="" data-y="['middle','middle','middle','middle']" data-voffset="['45','45','45','45']" data-fontsize="['16', '16', '14', '12']" data-lineheight="['16', '16', '14', '12']" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_in="opacity:0;s:300;e:Power2.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="3000" data-splitin="chars" data-splitout="none" data-basealign="slide" data-responsive="off" data-elementdelay="0.05" style="z-index: 9; font-weight: 400; color: rgba(255, 255, 255, 0.8); font-family: Raleway;">Outside Catering from Ksh 6500 per occation.
 </div>
+<a class="tp-caption button btn_blue" href="booking-form.html" data-x="center" data-hoffset="-100" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-calendar"></i>BOOK A ROOM NOW
+</a>
 
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-180" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2300" data-responsive_offset="on" style="z-index: 7;background: url(images/icons/wave_white.svg);">
-</div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="-180" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[-100%];y:0;s:inherit;e:inherit;" data-start="2400" data-responsive_offset="on" style="z-index: 8;background: url(images/icons/wave_white.svg);">
-</div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="180" data-y="414" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2300" data-responsive_offset="on" style="z-index: 9;background: url(images/icons/wave_white.svg);">
-</div>
-
-<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme" data-x="center" data-hoffset="180" data-y="418" data-voffset="" data-width="['100']" data-height="['4']" data-transform_idle="o:1;" data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;s:1000;e:Power3.easeOut;" data-transform_out="opacity:0;s:300;" data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" data-start="2400" data-responsive_offset="on" style="z-index: 10;background: url(images/icons/wave_white.svg);">
-</div>
+<a class="tp-caption button btn_yellow " href="contact.html" data-x="center" data-hoffset="108" data-y="480" data-voffset="" data-responsive_offset="on" data-fontsize="14" data-whitespace="nowrap" data-frames='[{"delay":2400,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' style="z-index: 11;"><i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US NOW
+</a>
 </li>
 </ul>
 </div>
+</div>
+
+
+
 
         
              <!-- ========== HORIZONTAL BOOKING FORM 
