@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6 widget">
                     <div class="about">
-                        <a href="index.html"><img class="logo" src="{{ $frontThemeSettings->logo_url }}" height="80"
+                        <a href="/"><img class="logo" src="{{ $frontThemeSettings->logo_url }}" height="80"
                                 alt="Logo"></a>
                         <p>Over looking Ngong Hills and the leafy suburbs of Karen, Stanjo Karen Suites is a
                             family-owned hotel facility situated in a serene environment.</p>

@@ -55,7 +55,7 @@ class SettingController extends Controller
 
     
 
-        return view('admin.settings.index', compact('bookingTimes', 'images', 'tax', 'timezones', 'dateFormats', 'timeFormats', 'dateObject', 'currencies', 'enabledLanguages', 'smtpSetting', 'lastVersion', 'updateInfo', 'appVersion', 'laravelVersion', 'newUpdate', 'credentialSetting', 'smsSetting', 'roles', 'totalPermissions', 'modules'));
+        return view('admin.settings.index', compact('bookingTimes', 'images', 'tax', 'timezones', 'dateFormats', 'timeFormats', 'dateObject', 'currencies', 'enabledLanguages', 'smtpSetting', 'credentialSetting', 'smsSetting', 'roles', 'totalPermissions', 'modules'));
     }
 
     public function update(UpdateSetting $request, $id){

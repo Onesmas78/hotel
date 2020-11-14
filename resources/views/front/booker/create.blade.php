@@ -42,10 +42,10 @@
             </div>
         </div>
     </div>
-
+    
 @endsection
-
-<script defer>
+@push('footer-script')
+<script>
     $(document).ready(function() {
         /*========== SMARTWIZARD ==========*/
         $('#smartwizard').smartWizard({
@@ -56,3 +56,4 @@
     });
 
 </script>
+@endpush

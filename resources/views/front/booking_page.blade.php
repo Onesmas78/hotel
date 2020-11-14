@@ -66,7 +66,7 @@
         });
 
         $('#datepicker').datepicker({
-            // todayHighlight: true,
+            todayHighlight: true,
             templates: {
                 leftArrow: '<i class="fa fa-chevron-left"></i>',
                 rightArrow: '<i class="fa fa-chevron-right"></i>'
